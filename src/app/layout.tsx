@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import Navbar from "@/components/Header/Navbar";
 import Footer from "@/components/Footer/Footer";
-import "./globals.css";
+import "@/styles/globals.css";
 
 const geist = Geist({
   subsets: ["latin"],

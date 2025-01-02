@@ -1,0 +1,26 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1A1A1A;
+  border-top: 1px solid #333;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9D9D9D;
+}
+
+.footer a {
+  color: #9D9D9D;
+  margin: 0 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #FFFFFF;
+}
+
+/* Add padding to main content to prevent footer overlap */
+:global(main) {
+  padding-bottom: 4rem;
+} 

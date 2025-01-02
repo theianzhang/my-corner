@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from './page.module.css'
+import styles from '@/styles/shared/interior.module.css'
 
 export default function BallardPage() {
   return (
@@ -10,6 +10,10 @@ export default function BallardPage() {
           <h1>1st Home</h1>
           <h2>2021</h2>
           <h5>Interior Design</h5>
+        </div>
+
+        <div className={styles.separator}>
+          <hr className={styles.styleLine} />
         </div>
 
         <p>
@@ -69,10 +73,6 @@ export default function BallardPage() {
           <video controls className={styles.video}>
             <source src="/img/interior_design/living_room.mp4" type="video/mp4" />
           </video>
-        </div>
-
-        <div className={styles.separator}>
-          <hr className={styles.styleLine} />
         </div>
       </div>
     </div>

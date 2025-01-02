@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from './page.module.css'
+import styles from '@/styles/shared/interior.module.css'
 
 export default function TechNostalgiaPage() {
   return (

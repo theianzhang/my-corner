@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./page.module.css";
+import styles from "@/styles/pages/home.module.css";
 
 interface ProjectCardProps {
   href: string;
@@ -13,14 +13,15 @@ function ProjectCard({ href, imgSrc, alt }: ProjectCardProps) {
     <div className={styles.frame}>
       <div className={styles.container}>
         <Link href={href} className={styles.imageContainer}>
-          <Image
-            src={imgSrc}
-            alt={alt}
-            width={600}
-            height={400}
-            className={styles.image}
-            quality={90}
-          />
+          <div className={styles.imageWrapper}>
+            <Image
+              src={imgSrc}
+              alt={alt}
+              fill
+              className={styles.image}
+              quality={90}
+            />
+          </div>
         </Link>
       </div>
     </div>
@@ -33,12 +34,12 @@ export default function Home() {
       <div className={styles.grid}>
         <ProjectCard
           href="/highlights/c1"
-          imgSrc="/img/c1/cefr.jpeg"
+          imgSrc="/img/home/c1.png"
           alt="French C1 Level"
         />
         <ProjectCard
           href="/highlights/childrens_books"
-          imgSrc="/img/home/ml-autumn.png"
+          imgSrc="/img/home/sunwukong.png"
           alt="Children's Books"
         />
         <ProjectCard

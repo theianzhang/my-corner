@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './header.module.css'
+import styles from '@/styles/components/header.module.css'
 import { useState } from 'react'
 
 export default function Navbar() {

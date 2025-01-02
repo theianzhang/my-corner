@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from './page.module.css'
+import styles from '@/styles/shared/interior.module.css'
 
 export default function C1Page() {
   return (
@@ -44,13 +44,13 @@ export default function C1Page() {
         <p>
           Quelques choses que je connaissais à un moment donné, mais que j'ai oubliées, ptetre, au fils du temps:
         </p>
-        <ul>
-          <li>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>
             Y'a une méthodologie pour chaque épreuve, quelque soit le type de production: oral, écrit, compréhension, etc. 
             Sauf si vous avez maitrisé la langue au dernier degré, il est toujours difficile d'obtenir un bon résultat si 
             vous comprenez pas la méthodologie.
           </li>
-          <li>
+          <li className={styles.listItem}>
             Personellement, j'ai besoin d'une "forcing function." Ce n'est qu'en m'inscrivant à l'examen que j'ai eu cette 
             motivation extérieure. Grâce à l'écoute de la radio française tous les matins, à la rédaction d'essais et de 
             lettres en français toutes les semaines, j'ai vraiment franchi un cap au début de cette année.

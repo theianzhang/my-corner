@@ -1,0 +1,53 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profile {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.profileImage {
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.profile h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile h2 {
+  color: #666;
+  font-weight: normal;
+}
+
+.content {
+  line-height: 1.8;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}
+
+.content a {
+  color: #8A8A8A;
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: var(--foreground);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .profile {
+    margin: 2rem 0;
+  }
+} 

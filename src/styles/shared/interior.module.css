@@ -1,0 +1,115 @@
+.videoContainer {
+    width: 100%;
+    max-width: 375px;  /* iPhone width */
+    margin: 2rem auto;  /* Center the container */
+    aspect-ratio: 9/16;  /* Typical phone video ratio */
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;  /* Optional: rounded corners */
+    background: #000;    /* Black background while loading */
+}
+
+/* Line Separator w/ Glyph */
+.styleLine {
+    overflow: visible;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+
+.styleLine:after {
+    content: "Z";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    background: #E9ECEF;
+}
+
+/* Content styles */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.mediaContainer {
+    margin: 3rem 0;
+    width: 100%;
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.header {
+    text-align: center;
+    margin: 2rem 0 3rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.header h5 {
+    font-size: 1rem;
+    color: #888;
+    font-weight: normal;
+}
+
+.content p {
+    margin-bottom: 2rem;
+}
+
+.content a {
+    color: #8A8A8A;
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: var(--foreground);
+    text-decoration: underline;
+}
+
+.list {
+    list-style-type: disc;
+    margin: 0 0 2rem 2rem;
+}
+
+.listItem {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+    }
+    
+    .header {
+        margin: 1rem 0 2rem;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+} 
