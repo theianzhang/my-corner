@@ -1,0 +1,42 @@
+.gallery {
+  padding: 2rem 15vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.galleryItem {
+  background: var(--background);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.galleryItem img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+}
+
+.bodyText {
+  padding: 0 15vw;
+  text-align: left;
+  line-height: 1.6;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 2rem 5vw;
+  }
+  
+  .bodyText {
+    padding: 0 5vw;
+  }
+} 

@@ -1,0 +1,85 @@
+.main {
+  min-height: 100vh;
+  background-color: white;
+  padding: 2rem 0;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin: 2rem 0 4rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header h5 {
+  font-size: 1rem;
+  color: #666;
+  font-weight: normal;
+}
+
+.posts {
+  display: grid;
+  gap: 3rem;
+}
+
+.post {
+  transition: transform 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+}
+
+.postLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.postImage {
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.postContent h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.postContent h5 {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.postContent p {
+  color: #444;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 1rem;
+  }
+  
+  .header {
+    margin: 1rem 0 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+} 

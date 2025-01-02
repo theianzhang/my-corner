@@ -1,0 +1,71 @@
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.8;
+}
+
+.header {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.header h5 {
+  font-size: 1rem;
+  color: #888;
+  font-weight: normal;
+}
+
+.content p {
+  margin-bottom: 2rem;
+}
+
+.content a {
+  color: #666;
+  text-decoration: underline;
+}
+
+.content a:hover {
+  color: var(--foreground);
+}
+
+.mediaContainer {
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+  
+  .header {
+    margin: 1rem 0 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+} 
