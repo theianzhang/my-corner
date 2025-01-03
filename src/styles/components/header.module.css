@@ -81,7 +81,7 @@
 
 @media (max-width: 768px) {
   .containerFluid {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
   }
 
   .navbarToggler {
@@ -94,6 +94,9 @@
     cursor: pointer;
     width: 40px;
     height: 40px;
+    margin-right: 0.5rem;
+    position: relative;
+    right: 0;
   }
 
   .navbarCollapse {
@@ -120,4 +123,12 @@
     width: 100%;
     text-align: center;
   }
+}
+
+.header {
+  padding: 1rem 2rem;
+}
+
+.menuButton {
+  margin-right: 0.5rem;
 }

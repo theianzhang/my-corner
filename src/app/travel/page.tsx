@@ -1,59 +1,39 @@
-import Image from "next/image";
-import Link from "next/link";
+import GlobeWrapper from '@/components/Globe/GlobeWrapper'
+import { travelLocations } from '@/data/travelLocations'
 import styles from '@/styles/pages/travel.module.css'
 
-interface TravelCardProps {
-  href: string;
-  imgSrc: string;
-  title: string;
-  emoji: string;
-  description: string;
-}
-
-function TravelCard({ href, imgSrc, title, emoji, description }: TravelCardProps) {
-  return (
-    <Link href={href} className={styles.card}>
-      <Image 
-        src={imgSrc}
-        alt={title}
-        width={600}
-        height={400}
-        className={styles.cardImage}
-        quality={90}
-      />
-      <div className={styles.cardContent}>
-        <span className={styles.emoji}>{emoji}</span>
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </div>
-    </Link>
-  );
-}
-
 export default function Travel() {
+  const totalCountries = travelLocations.length
+  const continentCounts = {
+    Europe: ['france', 'germany', 'italy', 'spain', 'united-kingdom', 'ireland', 'portugal', 'netherlands', 
+             'belgium', 'luxembourg', 'switzerland', 'austria', 'czech', 'hungary', 'denmark', 'norway', 
+             'sweden', 'iceland', 'malta', 'vatican', 'belarus', 'russia'].length,
+    Asia: ['japan', 'korea', 'china', 'vietnam', 'cambodia', 'thailand', 'india'].length,
+    Americas: ['united-states', 'canada', 'mexico', 'guatemala', 'belize', 'colombia', 'peru', 
+               'chile', 'argentina', 'jamaica'].length,
+    Oceania: ['australia'].length,
+    Africa: ['egypt', 'tanzania'].length
+  }
+
   return (
-    <div className={styles.container}>
-      <div className={styles.intro}>
-        <h1>Travel</h1>
-        <p>A collection of stories and photos from around the world</p>
-      </div>
-      <div className={styles.grid}>
-        <TravelCard 
-          href="/travel/france"
-          imgSrc="/img/travel/france.jpg"
-          title="France"
-          emoji="🇫🇷"
-          description="Living in Paris, 2022-Present"
-        />
-        <TravelCard 
-          href="/travel/japan"
-          imgSrc="/img/travel/japan.jpg"
-          title="Japan"
-          emoji="🇯🇵"
-          description="Tokyo, Kyoto, Osaka"
-        />
-        {/* Add more travel cards based on your content */}
-      </div>
-    </div>
-  );
+    <main className={styles.container}>
+      <section className={styles.globeSection}>
+        <GlobeWrapper />
+      </section>
+      
+      <section className={styles.statsSection}>
+        <h2 className={styles.statsTitle}>
+          {totalCountries} Countries Explored
+        </h2>
+        <div className={styles.continentGrid}>
+          {Object.entries(continentCounts).map(([continent, count]) => (
+            <div key={continent} className={styles.continentStat}>
+              <span className={styles.continentName}>{continent}</span>
+              <span className={styles.countryCount}>{count}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  )
 } 

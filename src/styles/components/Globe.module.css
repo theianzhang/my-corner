@@ -1,0 +1,21 @@
+.globeContainer {
+  width: 100vw;
+  height: 100vw;
+  max-width: 900px;
+  max-height: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .globeContainer {
+    width: 90vh;
+    height: 90vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .globeContainer {
+    width: 900px;
+    height: 900px;
+  }
+} 
