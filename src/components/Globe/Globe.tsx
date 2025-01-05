@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { travelLocations } from '@/data/travelLocations'
 import styles from '@/styles/components/Globe.module.css'
+import * as THREE from 'three'
 
 const GEOJSON_URL = 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_0_countries.geojson'
 
@@ -20,7 +21,7 @@ interface GeoJSONFeature {
   };
 }
 
-function Globe3D() {
+const Globe3D = React.memo(function Globe3D() {
   const [geoData, setGeoData] = useState<GeoJSONFeature[]>([])
 
   useEffect(() => {
@@ -40,20 +41,14 @@ function Globe3D() {
   }, [])
 
   const globe = new ThreeGlobe()
-    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-day.jpg')
     .polygonsData(geoData)
     .polygonAltitude(0.01)
     .polygonCapColor((d: any) => d.isVisited ? 'transparent' : '#666666')
     .polygonSideColor((d: any) => d.isVisited ? 'transparent' : '#666666')
 
-  if (globe.polygonMaterial) {
-    globe.polygonMaterial.opacity = d => d.isVisited ? 0 : 1
-    globe.polygonMaterial.transparent = true
-  }
-
-  if (globe.polygonSideMaterial) {
-    globe.polygonSideMaterial.opacity = 0.3
-    globe.polygonSideMaterial.transparent = true
+  if (globe.globeMaterial) {
+    globe.globeMaterial.color = new THREE.Color('#1A1A1A')
   }
 
   return (
@@ -66,15 +61,11 @@ function Globe3D() {
         enablePan={false}
         autoRotate
         autoRotateSpeed={-0.25}
+        minDistance={150}
+        maxDistance={250}
       />
     </Canvas>
   )
-}
+})
 
-export default function Globe() {
-  return (
-    <div className={styles.globeContainer}>
-      <Globe3D />
-    </div>
-  )
-} 
+export default Globe3D 
