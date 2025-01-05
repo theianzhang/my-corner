@@ -1,18 +1,9 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import styles from '@/styles/pages/about.module.css'
 
 export default function About() {
   return (
     <div className={styles.container}>
       <div className={styles.profile}>
-        <Image
-          src="/img/about/profile.jpg"
-          alt="Ian Zhang"
-          width={200}
-          height={200}
-          className={styles.profileImage}
-          quality={90}
-        />
         <h1>Ian Zhang</h1>
         <h2>Writer, Traveler, Former PM</h2>
       </div>

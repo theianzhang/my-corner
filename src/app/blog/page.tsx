@@ -1,16 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from '@/styles/pages/blog.module.css'
 
 export default function BlogPage() {
   return (
     <main className={styles.main}>
       <div className={styles.content}>
-        <div className={styles.header}>
-          <h1>Blog</h1>
-          <h5>Thoughts on tech, travel, and everything in between</h5>
-        </div>
-
         <div className={styles.posts}>
           <article className={styles.post}>
             <Link href="/blog/metaverse" className={styles.postLink}>
@@ -25,7 +20,6 @@ export default function BlogPage() {
               </div>
               <div className={styles.postContent}>
                 <h2>The Metaverse in Retrospect</h2>
-                <h5>2024</h5>
               </div>
             </Link>
           </article>

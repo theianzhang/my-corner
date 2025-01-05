@@ -1,6 +1,7 @@
 .footer {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   background-color: #1A1A1A;
   border-top: 1px solid #333;
@@ -8,6 +9,7 @@
   text-align: center;
   font-size: 0.9rem;
   color: #9D9D9D;
+  z-index: 1000;
 }
 
 .footer a {
@@ -20,7 +22,7 @@
   color: #FFFFFF;
 }
 
-/* Add padding to main content to prevent footer overlap */
-:global(main) {
+/* Add padding to main content */
+.footerPadding {
   padding-bottom: 4rem;
 } 

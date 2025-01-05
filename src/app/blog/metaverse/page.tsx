@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from './page.module.css'
 
@@ -10,16 +9,6 @@ export default function MetaverseBlogPost() {
           <div className={styles.header}>
             <h1>The Metaverse in Retrospect</h1>
             <h5>2024</h5>
-          </div>
-
-          <div className={styles.heroImage}>
-            <Image
-              src="/img/metaverse/metaverse.webp"
-              alt="Metaverse"
-              width={1200}
-              height={600}
-              className={styles.image}
-            />
           </div>
 
           <div className={styles.body}>

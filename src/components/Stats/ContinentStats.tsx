@@ -19,20 +19,20 @@ const CONTINENTS = [
   {
     name: 'Asia',
     count: 7,
-    imagePath: '/img/travel/continents/asia-outline.jpg',
+    imagePath: '/img/travel/continents/asia-outline.png',
     countries: ['japan', 'korea', 'china', 'vietnam', 'cambodia', 'thailand', 'india']
   },
   {
     name: 'Americas',
     count: 10,
-    imagePath: '/img/travel/continents/americas-outline.jpg',
+    imagePath: '/img/travel/continents/americas-outline.png',
     countries: ['united-states', 'canada', 'mexico', 'guatemala', 'belize', 'colombia', 'peru', 
                 'chile', 'argentina', 'jamaica']
   },
   {
     name: 'Oceania',
     count: 1,
-    imagePath: '/img/travel/continents/oceania-outline.jpg',
+    imagePath: '/img/travel/continents/oceania-outline.png',
     countries: ['australia']
   },
   {
@@ -59,30 +59,60 @@ export default function ContinentStats() {
     onSwipedRight: () => setActiveIndex((prev) => (prev - 1 + CONTINENTS.length) % CONTINENTS.length),
   })
 
+  const handlePrevious = () => {
+    setActiveIndex((prev) => (prev - 1 + CONTINENTS.length) % CONTINENTS.length)
+  }
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % CONTINENTS.length)
+  }
+
   return (
     <section className={styles.statsSection} {...handlers}>
       <h2 className={styles.statsTitle}>
-        {travelLocations.length} Countries Visited
+        {travelLocations.length} Countries Explored
       </h2>
       
-      <AnimatePresence mode='wait'>
-        <motion.div 
-          key={activeIndex}
-          className={styles.continentImage}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.3 }}
-        >
-          <Image
-            src={CONTINENTS[activeIndex].imagePath}
-            alt={CONTINENTS[activeIndex].name}
-            width={200}
-            height={200}
-            className={styles.outlineImage}
-          />
-        </motion.div>
-      </AnimatePresence>
+      <div className={styles.carouselContainer}>
+        {!isMobile && (
+          <button 
+            className={styles.carouselButton} 
+            onClick={handlePrevious}
+            aria-label="Previous continent"
+          >
+            ←
+          </button>
+        )}
+
+        <AnimatePresence mode='wait'>
+          <motion.div 
+            key={activeIndex}
+            className={styles.continentImage}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Image
+              src={CONTINENTS[activeIndex].imagePath}
+              alt={CONTINENTS[activeIndex].name}
+              width={200}
+              height={200}
+              className={styles.outlineImage}
+            />
+          </motion.div>
+        </AnimatePresence>
+
+        {!isMobile && (
+          <button 
+            className={styles.carouselButton} 
+            onClick={handleNext}
+            aria-label="Next continent"
+          >
+            →
+          </button>
+        )}
+      </div>
 
       <div className={styles.carousel}>
         {CONTINENTS.map((_, index) => (

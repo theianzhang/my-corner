@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     overscroll-behavior: none;
+    overflow-x: hidden;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #E9ECEF;
     overflow-x: hidden;
+    padding-bottom: 60px;
 }
 
 #__next {

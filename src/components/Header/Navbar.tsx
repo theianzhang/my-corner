@@ -8,10 +8,14 @@ import { useState } from 'react'
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.containerFluid}>
-        <Link href="/" className={styles.navbarBrand}>
+        <Link href="/" className={styles.navbarBrand} onClick={handleLinkClick}>
           <Image 
             src="/img/home/logo-black.png" 
             width={30} 
@@ -32,16 +36,16 @@ export default function Navbar() {
         <div className={`${styles.navbarCollapse} ${isMenuOpen ? styles.show : ''}`}>
           <ul className={styles.navbarNav}>
             <li className={styles.navItem}>
-              <Link href="/" className={styles.navLink}>Home</Link>
+              <Link href="/" className={styles.navLink} onClick={handleLinkClick}>Home</Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/travel" className={styles.navLink}>Travel</Link>
+              <Link href="/travel" className={styles.navLink} onClick={handleLinkClick}>Travel</Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/blog" className={styles.navLink}>Blog</Link>
+              <Link href="/blog" className={styles.navLink} onClick={handleLinkClick}>Blog</Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/about" className={styles.navLink}>About</Link>
+              <Link href="/about" className={styles.navLink} onClick={handleLinkClick}>About</Link>
             </li>
           </ul>
         </div>
