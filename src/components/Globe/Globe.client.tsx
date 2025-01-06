@@ -24,22 +24,26 @@ interface GeoJSONData extends GeoJSONFeature {
   isVisited: boolean;
 }
 
+type GlobeMaterial = THREE.MeshBasicMaterial | THREE.MeshPhongMaterial | THREE.MeshStandardMaterial;
+
+type GlobeInstance = ThreeGlobe & {
+  globeMaterial: () => THREE.Material;
+}
+
 export default function Globe3D() {
   const [geoData, setGeoData] = useState<GeoJSONData[]>([])
-  const [globe, setGlobe] = useState<any>(null)
+  const [globe, setGlobe] = useState<GlobeInstance | null>(null)
 
   // Initialize globe
   useEffect(() => {
-    const globeInstance = new ThreeGlobe()
+    const globeInstance = (new ThreeGlobe() as GlobeInstance)
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-day.jpg')
       .polygonAltitude(0.01)
-      .polygonCapColor((d: any) => (d as GeoJSONData).isVisited ? 'transparent' : '#666666')
-      .polygonSideColor((d: any) => (d as GeoJSONData).isVisited ? 'transparent' : '#666666')
+      .polygonCapColor((d: object) => ((d as GeoJSONData).isVisited ? 'transparent' : '#666666'))
+      .polygonSideColor((d: object) => ((d as GeoJSONData).isVisited ? 'transparent' : '#666666'))
 
-    const globeMaterial = (globeInstance as any).globeMaterial() as THREE.MeshPhongMaterial
-    if (globeMaterial) {
-      globeMaterial.color = new THREE.Color('#1A1A1A')
-    }
+    const material = globeInstance.globeMaterial() as THREE.MeshPhongMaterial;
+    material.color = new THREE.Color('#1A1A1A');
 
     setGlobe(globeInstance)
 

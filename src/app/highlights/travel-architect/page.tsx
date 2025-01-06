@@ -10,6 +10,7 @@ export default function TravelArchitectPage() {
           alt="Cherry Blossoms"
           width={1200}
           height={600}
+          sizes="(max-width: 768px) 100vw, 800px"
           className={styles.heroImage}
         />
       </div>
@@ -58,7 +59,6 @@ export default function TravelArchitectPage() {
 
         <section className={styles.section}>
           <h3>Product Framework</h3>
-
           <p>
             The infinity loop (borrowed from my days @ IBM) envisions product development as a continuous improvement model. 
             The end user is placed in the middle of a research and dev loop where each loop is validated with a series of 
@@ -92,11 +92,199 @@ export default function TravelArchitectPage() {
             />
             <h3>Personas</h3>
           </div>
+
+          <p>
+            I formalized my conversations with other travelers into high level personas. These could have used a much more rigorous interview process, as well as other methodologies, but observational would have been pretty creepy and literature/ESM is non-existent. I'll note up front these were mostly sourced from my personal contacts, so obvious demographic biases are present.
+          </p>
+
+          {/* Abroad Annie */}
+          <div className={styles.personaSection}>
+            <div className={styles.mediaContainer}>
+              <Image
+                src="/img/travel-architect/abroad-annie.png"
+                alt="Abroad Annie"
+                width={800}
+                height={400}
+                className={styles.image}
+              />
+            </div>
+            <ul className={styles.list}>
+              <li className={styles.listItem}>Living her best millenial life</li>
+              <li className={styles.listItem}>Saves up to travel as much as possible</li>
+              <li className={styles.listItem}>Wants to learn as much as possible about the places she travels to</li>
+              <li className={styles.listItem}><strong>Key Pain Point:</strong> Guided tours are expensive.</li>
+            </ul>
+          </div>
+
+          {/* Business Bobby */}
+          <div className={styles.personaSection}>
+            <div className={styles.mediaContainer}>
+              <Image
+                src="/img/travel-architect/business-bobby.png"
+                alt="Business Bobby"
+                width={800}
+                height={400}
+                className={styles.image}
+              />
+            </div>
+            <ul className={styles.list}>
+              <li className={styles.listItem}>Travels frequently for work</li>
+              <li className={styles.listItem}>Enjoys taking in the local sights after meetings</li>
+              <li className={styles.listItem}>Took an architecture 101 class in college</li>
+              <li className={styles.listItem}><strong>Key Pain Point:</strong> Not enough time.</li>
+            </ul>
+          </div>
+
+          {/* Cultured Cranston */}
+          <div className={styles.personaSection}>
+            <div className={styles.mediaContainer}>
+              <Image
+                src="/img/travel-architect/cultured-cranston.png"
+                alt="Cultured Cranston"
+                width={800}
+                height={400}
+                className={styles.image}
+              />
+            </div>
+            <ul className={styles.list}>
+              <li className={styles.listItem}>Retired 1% er</li>
+              <li className={styles.listItem}>Speaks fondly of the "South of France"</li>
+              <li className={styles.listItem}>Hired an architect to customize their summer home</li>
+              <li className={styles.listItem}><strong>Key Pain Point:</strong> None.</li>
+            </ul>
+          </div>
         </section>
 
-        <p>
-          <strong>Conclusion:</strong> okay-ish first attempt with levers yet to pull on conversion. The key will be 
-          delivering v2 with an updated CV model that can detect individual features.
+        {/* Market and Competition Section */}
+        <section className={styles.section}>
+          <div className={styles.researchHeader}>
+            <Image
+              src="/img/travel-architect/research-logo.png"
+              alt="Research Logo"
+              width={100}
+              height={100}
+              className={styles.researchLogo}
+            />
+            <h3>Market and Competition</h3>
+          </div>
+
+          <p>
+            Validating the market for each of these personas and pain points was a fun exercise, especially since this was a passion project with no plans for monetization. The standard market analysis (TAM {'->'} SAM {'->'} Competitive Landscape {'->'} Segmentation {'->'} Strategic Differentiation {'->'} GTM) seemed slightly overkill, but I did end up putting some boundaries around each of those areas. Ultimately the insight around unit spend and mobile user behavior helped crystallize a GTM direction, so I dive deep on these below.
+          </p>
+
+          <div className={styles.mediaContainer}>
+            <Image
+              src="/img/travel-architect/mobile-behavior-segment-2.png"
+              alt="Mobile Behavior Segment"
+              width={1200}
+              height={800}
+              className={styles.image}
+            />
+          </div>
+
+          <ul className={styles.list}>
+            <li className={styles.listItem}>Travel applications are increasingly mobile-first</li>
+            <li className={styles.listItem}>Of all mobile apps, travel-related ones have the best 3-month retention</li>
+            <li className={styles.listItem}>Mobile penetration is extremely high among travelers</li>
+            <li className={styles.listItem}>Most users spend 85% of their time in 5 existing mobile apps</li>
+          </ul>
+
+          <div className={styles.mediaContainer}>
+            <Image
+              src="/img/travel-architect/unit-spend.png"
+              alt="Unit Spend"
+              width={1200}
+              height={800}
+              className={styles.image}
+            />
+          </div>
+
+          <ul className={styles.list}>
+            <li className={styles.listItem}>DiY apps are increasingly popular and require large-scale up front curation</li>
+            <li className={styles.listItem}>The average architecture guided tour lasts approximately 3 hours</li>
+            <li className={styles.listItem}>Revenue/install averages less than a dollar while acquisition cost across mobile platforms is roughly 3$/customer</li>
+          </ul>
+        </section>
+
+        {/* Features Table */}
+        <section className={styles.section}>
+          <p className={styles.textCenter}>Combining persona, market, and competitive insight led to the following high level features:</p>
+          
+          <div className={styles.tableContainer}>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Feature</th>
+                  <th>Priority</th>
+                  <th>Insight or Pain Point</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* Add table rows here */}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Development Sections */}
+        <section className={styles.section}>
+          <div className={styles.researchHeader}>
+            <Image
+              src="/img/travel-architect/develop-logo.png"
+              alt="Development Logo"
+              width={100}
+              height={100}
+              className={styles.researchLogo}
+            />
+            <h3>The "Architect" Problem</h3>
+          </div>
+
+          <p>
+            Placing the 3D model of a representative building and learning more about its distinguishing features was a key facet to learning more about architectural styles. Knowing users were having problems reaching insight meant I needed to introduce info quicker.
+          </p>
+
+          <div className={styles.sketchfabContainer}>
+            <iframe
+              src="https://sketchfab.com/models/48b346ea6c3b47958faf1dd61e4007b1/embed?preload=1"
+              title="Text examples"
+              allow="autoplay; fullscreen; vr"
+              className={styles.sketchfabEmbed}
+            />
+          </div>
+        </section>
+
+        {/* Analytics Section */}
+        <section className={styles.section}>
+          <h3 className={styles.textCenter}>GTM and Analytics</h3>
+          
+          <p>
+            Apple really has new app release down to a science. Turnaround time was under 48 hours from cutting the release branch to going live on the store, and they provide a really robust set of analytics from day one.
+          </p>
+
+          <div className={styles.mediaContainer}>
+            <Image
+              src="/img/travel-architect/app-analytics-overview.png"
+              alt="App Analytics Overview"
+              width={1200}
+              height={800}
+              className={styles.image}
+            />
+          </div>
+
+          <div className={styles.mediaContainer}>
+            <Image
+              src="/img/travel-architect/DAU.png"
+              alt="Daily Active Users"
+              width={1200}
+              height={800}
+              className={styles.image}
+            />
+          </div>
+        </section>
+
+        <p className={styles.conclusion}>
+          <strong>Conclusion:</strong> okay-ish first attempt with levers yet to pull on conversion. The key will be delivering v2 with an updated CV model that can detect individual features.
         </p>
       </div>
     </div>

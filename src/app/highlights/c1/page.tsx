@@ -5,15 +5,6 @@ import styles from '@/styles/shared/interior.module.css'
 export default function C1Page() {
   return (
     <div className={styles.container}>
-      <div className={styles.mediaContainer}>
-        <Image
-          src="/img/c1/cefr.jpg"
-          alt="CEFR Levels"
-          width={1200}
-          height={600}
-          className={styles.heroImage}
-        />
-      </div>
 
       <div className={styles.content}>
         <div className={styles.header}>
@@ -64,7 +55,7 @@ export default function C1Page() {
 
         <div className={styles.mediaContainer}>
           <Image
-            src="/img/c1/c1-reussite.jpg"
+            src="/img/c1/c1-reussite.jpeg"
             alt="C1 Success Certificate"
             width={1200}
             height={800}

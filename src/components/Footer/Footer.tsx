@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import styles from '@/styles/components/footer.module.css'
 import Script from 'next/script'
@@ -11,7 +13,7 @@ export default function Footer() {
         strategy="lazyOnload"
       />
       <footer className={styles.footer}>
-        <span> &copy; 2024 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Ian Zhang</span> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <span> &copy; 2025 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Ian Zhang</span> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
         <Link href="https://www.instagram.com/theianzhang/" target="_blank">
           <i className="fa fa-instagram"></i>
         </Link> &nbsp;
