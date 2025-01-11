@@ -39,8 +39,17 @@ export default function Globe3D() {
     const globeInstance = (new ThreeGlobe() as GlobeInstance)
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-day.jpg')
       .polygonAltitude(0.01)
-      .polygonCapColor((d: object) => ((d as GeoJSONData).isVisited ? 'transparent' : '#666666'))
-      .polygonSideColor((d: object) => ((d as GeoJSONData).isVisited ? 'transparent' : '#666666'))
+      .polygonCapColor((d: object) => {
+        const data = d as GeoJSONData;
+        // Don't render polygons for Antarctica
+        if (data.properties.sovereignt === 'Antarctica') return 'transparent';
+        return data.isVisited ? 'transparent' : '#666666';
+      })
+      .polygonSideColor((d: object) => {
+        const data = d as GeoJSONData;
+        if (data.properties.sovereignt === 'Antarctica') return 'transparent';
+        return data.isVisited ? 'transparent' : '#666666';
+      });
 
     const material = globeInstance.globeMaterial() as THREE.MeshPhongMaterial;
     material.color = new THREE.Color('#1A1A1A');
@@ -73,7 +82,7 @@ export default function Globe3D() {
   if (!globe) return null
 
   return (
-    <Canvas camera={{ position: [0, 0, 200], fov: 90 }}>
+    <Canvas camera={{ position: [2000, 1200, 0], fov: 70 }}>
       <ambientLight intensity={1.2} />
       <pointLight position={[10, 10, 10]} intensity={1.2} />
       <primitive object={globe} />

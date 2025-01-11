@@ -4,8 +4,8 @@ const Globe3D = dynamic(() => import('./Globe.client'), {
   ssr: false,
   loading: () => (
     <div style={{ 
-      width: '100%', 
-      height: '45vh', 
+      width: '100vw', 
+      height: '50vh', 
       display: 'flex', 
       justifyContent: 'center', 
       alignItems: 'center',

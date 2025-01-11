@@ -4,6 +4,8 @@ import Globe from '@/components/Globe/Globe'
 import ContinentStats from '@/components/Stats/ContinentStats'
 import styles from '@/styles/pages/travel.module.css'
 
+export const dynamic = 'force-static'
+
 export default function Travel() {
   return (
     <main className={styles.container}>
