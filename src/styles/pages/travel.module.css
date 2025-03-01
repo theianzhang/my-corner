@@ -120,6 +120,13 @@
   background: #1A1A1A;
 }
 
+.countriesSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 60px 0.5rem;

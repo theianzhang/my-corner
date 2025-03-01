@@ -2,6 +2,7 @@
 
 import Globe from '@/components/Globe/Globe'
 import ContinentStats from '@/components/Stats/ContinentStats'
+import CountryThumbnails from '@/components/Country/CountryThumbnails'
 import styles from '@/styles/pages/travel.module.css'
 
 export const dynamic = 'force-static'
@@ -15,6 +16,10 @@ export default function Travel() {
 
       <section className={styles.globeSection}>
         <Globe />
+      </section>
+      
+      <section className={styles.countriesSection}>
+        <CountryThumbnails />
       </section>
       
       <ContinentStats />

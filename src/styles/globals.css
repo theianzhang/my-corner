@@ -10,9 +10,8 @@ body {
     min-height: 100%;
     position: relative;
     font-family: 'Roboto', sans-serif;
-    background-color: #E9ECEF;
+    background-color: #121212;
     overflow-x: hidden;
-    padding-bottom: 60px;
 }
 
 #__next {
