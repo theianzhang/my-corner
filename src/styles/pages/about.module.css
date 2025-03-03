@@ -1,42 +1,314 @@
 .container {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 2rem 60px;  /* Account for navbar and footer */
-  box-sizing: border-box;
-  background-color: #E9ECEF;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container main {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 100%; /* Ensure content doesn't overflow on mobile */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .profile {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-top: 5rem; /* Add space to prevent navbar overlap */
+  margin-bottom: 3rem;
+}
+
+.profileImage {
+  position: relative;
+  width: 120px; /* Smaller on mobile */
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #333;
+}
+
+.image {
+  object-fit: cover;
 }
 
 .profile h1 {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Smaller on mobile */
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  color: #fff;
+  word-break: break-word; /* Prevent text overflow */
 }
 
 .profile h2 {
-  color: #666;
-  font-weight: normal;
+  font-size: 1.25rem; /* Smaller on mobile */
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #aaa;
+  word-break: break-word; /* Prevent text overflow */
+}
+
+.profile p {
+  max-width: 100%; /* Full width on mobile */
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+  color: #ddd;
+  padding: 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.socialLinks a {
+  font-size: 1.5rem;
+  color: #aaa;
+  transition: color 0.2s ease;
+}
+
+.socialLinks a:hover {
+  color: #fff;
 }
 
 .content {
-  max-width: 800px;
   width: 100%;
-  line-height: 1.8;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.content section {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.content h2 {
+  font-size: 1.5rem; /* Smaller on mobile */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #333;
+  color: #fff;
+}
+
+.content h3 {
+  font-size: 1.25rem; /* Smaller on mobile */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  word-break: break-word; /* Prevent text overflow */
+}
+
+.content h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #bbb;
+  word-break: break-word; /* Prevent text overflow */
+}
+
+.content p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #aaa;
+  font-size: 0.95rem;
 }
 
 .content a {
-  color: #8A8A8A;
+  color: #3b82f6;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .content a:hover {
-  color: var(--foreground);
+  color: #60a5fa;
   text-decoration: underline;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 1rem;
+  width: 100%;
+}
+
+.skillCard {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.skillTags span {
+  background-color: #2d2d2d;
+  color: #ddd;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.experienceItem, .educationItem {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.experienceHeader, .educationHeader {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.experienceHeader span, .educationHeader span {
+  color: #888;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 1rem;
+  width: 100%;
+}
+
+.projectCard {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.contactButton {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.contactButton:hover {
+  background-color: #2563eb;
+  text-decoration: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 640px) {
+  .container main {
+    padding: 2rem;
+  }
+  
+  .profile {
+    margin-top: 2rem;
+  }
+  
+  .experienceHeader, .educationHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .experienceHeader span, .educationHeader span {
+    margin-top: 0;
+  }
+  
+  .profile h1 {
+    font-size: 2.25rem;
+  }
+  
+  .profile h2 {
+    font-size: 1.5rem;
+  }
+  
+  .content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .content h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container main {
+    max-width: 720px;
+    padding: 3rem 2rem;
+  }
+  
+  .profile {
+    margin-top: 1rem;
+  }
+  
+  .profileImage {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .skillsGrid, .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .profile p {
+    max-width: 600px;
+    font-size: 1rem;
+  }
+  
+  .content p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container main {
+    max-width: 960px;
+    padding: 4rem 2rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .profile h1 {
+    font-size: 2.5rem;
+  }
+  
+  .profile h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container main {
+    max-width: 1100px;
+  }
 }
