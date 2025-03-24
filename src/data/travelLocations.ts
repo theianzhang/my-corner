@@ -5,6 +5,18 @@ interface TravelLocation {
   url: string;
   thumbnailUrl: string;
   visited: boolean;
+  visitedYear: number | number[];  // Can be single year or array of years
+  countryInfo: {
+    population: number;
+    gdp: {
+      amount: string;  // e.g. "$21.4 trillion"
+      worldRank: number;
+    };
+    interestingFact: string;
+    governmentType: string;  // At time of visit
+    currency: string;  // At time of visit
+    languages: string[];  // Official languages
+  };
 }
 
 export const travelLocations: TravelLocation[] = [
@@ -14,7 +26,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [-38.4161, -63.6167],
     url: '/travel/argentina',
     thumbnailUrl: '/img/country-thumbs/argentina.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 45.38,
+      gdp: {
+        amount: "$384.4 billion",
+        worldRank: 32
+      },
+      interestingFact: "Argentina is the eighth largest country in the world by area.",
+      governmentType: "Federal Republic",
+      currency: "Argentine peso",
+      languages: ["Spanish"]
+    }
   },
   {
     id: 'AU',
@@ -22,7 +46,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [-25.2744, 133.7751],
     url: '/travel/australia',
     thumbnailUrl: '/img/country-thumbs/australia.png',
-    visited: true
+    visited: true,
+    visitedYear: 2018,
+    countryInfo: {
+      population: 25.78,
+      gdp: {
+        amount: "$1.47 trillion",
+        worldRank: 14
+      },
+      interestingFact: "Australia is the smallest continent but the sixth largest country in the world.",
+      governmentType: "Federal parliamentary democracy",
+      currency: "Australian dollar",
+      languages: ["English"]
+    }
   },
   {
     id: 'AT',
@@ -30,7 +66,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [47.5162, 14.5501],
     url: '/travel/austria',
     thumbnailUrl: '/img/country-thumbs/austria.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 9.012,
+      gdp: {
+        amount: "$435.4 billion",
+        worldRank: 34
+      },
+      interestingFact: "Austria is the world's second largest exporter of musical instruments.",
+      governmentType: "Federal parliamentary democracy",
+      currency: "Euro",
+      languages: ["German"]
+    }
   },
   {
     id: 'BY',
@@ -38,7 +86,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [53.7098, 27.9534],
     url: '/travel/belarus',
     thumbnailUrl: '/img/country-thumbs/belarus.png',
-    visited: true
+    visited: true,
+    visitedYear: 2016,
+    countryInfo: {
+      population: 9.4,
+      gdp: {
+        amount: "$54.2 billion",
+        worldRank: 114
+      },
+      interestingFact: "Belarus is the only European country not bordering the Black Sea.",
+      governmentType: "Unitary presidential constitutional republic",
+      currency: "Belarusian ruble",
+      languages: ["Belarusian", "Russian"]
+    }
   },
   {
     id: 'BE',
@@ -46,7 +106,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [50.8503, 4.3517],
     url: '/travel/belgium',
     thumbnailUrl: '/img/country-thumbs/belgium.png',
-    visited: true
+    visited: true,
+    visitedYear: [2016, 2022],
+    countryInfo: {
+      population: 11.59,
+      gdp: {
+        amount: "$519.5 billion",
+        worldRank: 33
+      },
+      interestingFact: "Belgium is the only country in the world with a national holiday on the first of every month.",
+      governmentType: "Federal parliamentary democracy",
+      currency: "Euro",
+      languages: ["Dutch", "French", "German"]
+    }
   },
   {
     id: 'BZ',
@@ -54,7 +126,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [17.1899, -88.4976],
     url: '/travel/belize',
     thumbnailUrl: '/img/country-thumbs/belize.png',
-    visited: true
+    visited: true,
+    visitedYear: 2017,
+    countryInfo: {
+      population: 0.4,
+      gdp: {
+        amount: "$1.9 billion",
+        worldRank: 187
+      },
+      interestingFact: "Belize is the only country in Central America that speaks both English and Spanish.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Belize dollar",
+      languages: ["English"]
+    }
   },
   {
     id: 'KH',
@@ -62,7 +146,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [12.5657, 104.9910],
     url: '/travel/cambodia',
     thumbnailUrl: '/img/country-thumbs/cambodia.png',
-    visited: true
+    visited: true,
+    visitedYear: 2015,
+    countryInfo: {
+      population: 16.72,
+      gdp: {
+        amount: "$24.2 billion",
+        worldRank: 124
+      },
+      interestingFact: "Cambodia is the only Southeast Asian country to have been a French colony.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Cambodian riel",
+      languages: ["Khmer"]
+    }
   },
   {
     id: 'CA',
@@ -70,7 +166,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [56.1304, -106.3468],
     url: '/travel/canada',
     thumbnailUrl: '/img/country-thumbs/canada.png',
-    visited: true
+    visited: true,
+    visitedYear: 3000,
+    countryInfo: {
+      population: 38.01,
+      gdp: {
+        amount: "$1.93 trillion",
+        worldRank: 10
+      },
+      interestingFact: "Canada is the world's largest producer of uranium.",
+      governmentType: "Federal parliamentary democracy",
+      currency: "Canadian dollar",
+      languages: ["English", "French"]
+    }
   },
   {
     id: 'CL',
@@ -78,7 +186,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [-35.6751, -71.5430],
     url: '/travel/chile',
     thumbnailUrl: '/img/country-thumbs/chile.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 19.12,
+      gdp: {
+        amount: "$284.4 billion",
+        worldRank: 38
+      },
+      interestingFact: "Chile is the world's leading producer of copper.",
+      governmentType: "Unitary presidential constitutional republic",
+      currency: "Chilean peso",
+      languages: ["Spanish"]
+    }
   },
   {
     id: 'CN',
@@ -86,7 +206,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [35.8617, 104.1954],
     url: '/travel/china',
     thumbnailUrl: '/img/country-thumbs/china.png',
-    visited: true
+    visited: true,
+    visitedYear: 3000,
+    countryInfo: {
+      population: 1.402,
+      gdp: {
+        amount: "$17.7 trillion",
+        worldRank: 2
+      },
+      interestingFact: "China is the world's most populous country.",
+      governmentType: "Unitary socialist state",
+      currency: "Renminbi",
+      languages: ["Chinese"]
+    }
   },
   {
     id: 'CO',
@@ -94,7 +226,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [4.5709, -74.2973],
     url: '/travel/colombia',
     thumbnailUrl: '/img/country-thumbs/colombia.png',
-    visited: true
+    visited: true,
+    visitedYear: [2016, 2023],
+    countryInfo: {
+      population: 50.88,
+      gdp: {
+        amount: "$274.4 billion",
+        worldRank: 40
+      },
+      interestingFact: "Colombia is the only South American country with coastlines on both the Caribbean and Pacific Oceans.",
+      governmentType: "Unitary presidential constitutional republic",
+      currency: "Colombian peso",
+      languages: ["Spanish"]
+    }
   },
   {
     id: 'CZ',
@@ -102,7 +246,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [49.8175, 15.4730],
     url: '/travel/czech',
     thumbnailUrl: '/img/country-thumbs/czech.png',
-    visited: true
+    visited: true,
+    visitedYear: 2019,
+    countryInfo: {
+      population: 10.71,
+      gdp: {
+        amount: "$244.4 billion",
+        worldRank: 44
+      },
+      interestingFact: "The Czech Republic is the birthplace of Franz Kafka.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Czech koruna",
+      languages: ["Czech"]
+    }
   },
   {
     id: 'DK',
@@ -110,7 +266,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [56.2639, 9.5018],
     url: '/travel/denmark',
     thumbnailUrl: '/img/country-thumbs/denmark.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 5.852,
+      gdp: {
+        amount: "$344.4 billion",
+        worldRank: 37
+      },
+      interestingFact: "Denmark is the birthplace of Hans Christian Andersen.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Danish krone",
+      languages: ["Danish"]
+    }
   },
   {
     id: 'EG',
@@ -118,7 +286,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [26.8206, 30.8025],
     url: '/travel/egypt',
     thumbnailUrl: '/img/country-thumbs/egypt.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 102.4,
+      gdp: {
+        amount: "$344.4 billion",
+        worldRank: 24
+      },
+      interestingFact: "Egypt is the world's largest exporter of dates.",
+      governmentType: "Unitary presidential constitutional republic",
+      currency: "Egyptian pound",
+      languages: ["Arabic"]
+    }
   },
   {
     id: 'FR',
@@ -126,7 +306,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [46.2276, 2.2137],
     url: '/travel/france',
     thumbnailUrl: '/img/country-thumbs/france.png',
-    visited: true
+    visited: true,
+    visitedYear: 3000,
+    countryInfo: {
+      population: 67.4,
+      gdp: {
+        amount: "$2.8 trillion",
+        worldRank: 7
+      },
+      interestingFact: "France is the world's largest wine producer.",
+      governmentType: "Unitary semi-presidential democracy",
+      currency: "Euro",
+      languages: ["French"]
+    }
   },
   {
     id: 'DE',
@@ -134,7 +326,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [51.1657, 10.4515],
     url: '/travel/germany',
     thumbnailUrl: '/img/country-thumbs/germany.png',
-    visited: true
+    visited: true,
+    visitedYear: [2016, 2023, 2024],
+    countryInfo: {
+      population: 83.24,
+      gdp: {
+        amount: "$4.1 trillion",
+        worldRank: 2
+      },
+      interestingFact: "Germany is the world's largest exporter of machinery and vehicles.",
+      governmentType: "Federal parliamentary democracy",
+      currency: "Euro",
+      languages: ["German"]
+    }
   },
   {
     id: 'GT',
@@ -142,7 +346,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [15.7835, -90.2308],
     url: '/travel/guatemala',
     thumbnailUrl: '/img/country-thumbs/guatemala.png',
-    visited: true
+    visited: true,
+    visitedYear: 2024,
+    countryInfo: {
+      population: 18.2,
+      gdp: {
+        amount: "$84.4 billion",
+        worldRank: 77
+      },
+      interestingFact: "Guatemala is the most archaeologically rich country in the world.",
+      governmentType: "Unitary presidential constitutional republic",
+      currency: "Guatemalan quetzal",
+      languages: ["Spanish"]
+    }
   },
   {
     id: 'HU',
@@ -150,7 +366,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [47.1625, 19.5033],
     url: '/travel/hungary',
     thumbnailUrl: '/img/country-thumbs/hungary.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 9.66,
+      gdp: {
+        amount: "$184.4 billion",
+        worldRank: 54
+      },
+      interestingFact: "Hungary is the only country in the world with a landlocked capital.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Hungarian forint",
+      languages: ["Hungarian"]
+    }
   },
   {
     id: 'IS',
@@ -158,7 +386,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [64.9631, -19.0208],
     url: '/travel/iceland',
     thumbnailUrl: '/img/country-thumbs/iceland.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 0.36,
+      gdp: {
+        amount: "$24.4 billion",
+        worldRank: 134
+      },
+      interestingFact: "Iceland is the only country in the world with a national park under the sea.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Icelandic króna",
+      languages: ["Icelandic"]
+    }
   },
   {
     id: 'IN',
@@ -166,7 +406,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [20.5937, 78.9629],
     url: '/travel/india',
     thumbnailUrl: '/img/country-thumbs/india.png',
-    visited: true
+    visited: true,
+    visitedYear: 2019,
+    countryInfo: {
+      population: 1.38,
+      gdp: {
+        amount: "$3.3 trillion",
+        worldRank: 7
+      },
+      interestingFact: "India is the world's largest democracy.",
+      governmentType: "Federal parliamentary democracy",
+      currency: "Indian rupee",
+      languages: ["Hindi", "English"]
+    }
   },
   {
     id: 'IE',
@@ -174,7 +426,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [53.1424, -7.6921],
     url: '/travel/ireland',
     thumbnailUrl: '/img/country-thumbs/ireland.png',
-    visited: true
+    visited: true,
+    visitedYear: 2016,
+    countryInfo: {
+      population: 4.94,
+      gdp: {
+        amount: "$354.4 billion",
+        worldRank: 42
+      },
+      interestingFact: "Ireland is the only English-speaking country in the EU.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Euro",
+      languages: ["Irish", "English"]
+    }
   },
   {
     id: 'IT',
@@ -182,7 +446,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [41.8719, 12.5674],
     url: '/travel/italy',
     thumbnailUrl: '/img/country-thumbs/italy.png',
-    visited: true
+    visited: true,
+    visitedYear: 3000,
+    countryInfo: {
+      population: 60.46,
+      gdp: {
+        amount: "$2.1 trillion",
+        worldRank: 8
+      },
+      interestingFact: "Italy is the world's largest producer of pasta.",
+      governmentType: "Unitary parliamentary republic",
+      currency: "Euro",
+      languages: ["Italian"]
+    }
   },
   {
     id: 'JM',
@@ -190,7 +466,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [18.1096, -77.2975],
     url: '/travel/jamaica',
     thumbnailUrl: '/img/country-thumbs/jamaica.png',
-    visited: true
+    visited: true,
+    visitedYear: 2017,
+    countryInfo: {
+      population: 2.97,
+      gdp: {
+        amount: "$24.4 billion",
+        worldRank: 125
+      },
+      interestingFact: "Jamaica is the birthplace of reggae music.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Jamaican dollar",
+      languages: ["English"]
+    }
   },
   {
     id: 'JP',
@@ -198,7 +486,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [36.2048, 138.2529],
     url: '/travel/japan',
     thumbnailUrl: '/img/country-thumbs/japan.png',
-    visited: true
+    visited: true,
+    visitedYear: 2024,
+    countryInfo: {
+      population: 125.8,
+      gdp: {
+        amount: "$5.4 trillion",
+        worldRank: 3
+      },
+      interestingFact: "Japan is the world's largest island country.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Japanese yen",
+      languages: ["Japanese"]
+    }
   },
   {
     id: 'KR',
@@ -206,7 +506,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [35.9078, 127.7669],
     url: '/travel/korea',
     thumbnailUrl: '/img/country-thumbs/korea.png',
-    visited: true
+    visited: true,
+    visitedYear: 2013,
+    countryInfo: {
+      population: 51.26,
+      gdp: {
+        amount: "$1.6 trillion",
+        worldRank: 11
+      },
+      interestingFact: "South Korea is the world's fourth largest economy in terms of purchasing power parity.",
+      governmentType: "Unitary presidential constitutional republic",
+      currency: "South Korean won",
+      languages: ["Korean"]
+    }
   },
   {
     id: 'LU',
@@ -214,7 +526,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [49.8153, 6.1296],
     url: '/travel/luxembourg',
     thumbnailUrl: '/img/country-thumbs/luxembourg.png',
-    visited: true
+    visited: true,
+    visitedYear: 2025,
+    countryInfo: {
+      population: 0.63,
+      gdp: {
+        amount: "$74.4 billion",
+        worldRank: 64
+      },
+      interestingFact: "Luxembourg is the world's largest investment fund center.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Euro",
+      languages: ["Luxembourgish", "French", "German"]
+    }
   },
   {
     id: 'MT',
@@ -222,7 +546,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [35.9375, 14.3754],
     url: '/travel/malta',
     thumbnailUrl: '/img/country-thumbs/malta.png',
-    visited: true
+    visited: true,
+    visitedYear: 2024,
+    countryInfo: {
+      population: 0.44,
+      gdp: {
+        amount: "$14.4 billion",
+        worldRank: 144
+      },
+      interestingFact: "Malta is the smallest country in the EU by land area.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Euro",
+      languages: ["Maltese", "English"]
+    }
   },
   {
     id: 'MX',
@@ -230,7 +566,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [23.6345, -102.5528],
     url: '/travel/mexico',
     thumbnailUrl: '/img/country-thumbs/mexico.png',
-    visited: true
+    visited: true,
+    visitedYear: 3000,
+    countryInfo: {
+      population: 126.2,
+      gdp: {
+        amount: "$1.3 trillion",
+        worldRank: 13
+      },
+      interestingFact: "Mexico is the world's largest producer of silver.",
+      governmentType: "Unitary federal republic",
+      currency: "Mexican peso",
+      languages: ["Spanish"]
+    }
   },
   {
     id: 'NL',
@@ -238,7 +586,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [52.1326, 5.2913],
     url: '/travel/netherlands',
     thumbnailUrl: '/img/country-thumbs/netherlands.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 17.13,
+      gdp: {
+        amount: "$884.4 billion",
+        worldRank: 20
+      },
+      interestingFact: "The Netherlands is the world's largest exporter of agricultural products.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Euro",
+      languages: ["Dutch"]
+    }
   },
   {
     id: 'NO',
@@ -246,7 +606,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [60.4720, 8.4689],
     url: '/travel/norway',
     thumbnailUrl: '/img/country-thumbs/norway.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 5.42,
+      gdp: {
+        amount: "$404.4 billion",
+        worldRank: 39
+      },
+      interestingFact: "Norway is the world's largest exporter of hydroelectric power.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Norwegian krone",
+      languages: ["Norwegian"]
+    }
   },
   {
     id: 'PE',
@@ -254,7 +626,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [-9.1900, -75.0152],
     url: '/travel/peru',
     thumbnailUrl: '/img/country-thumbs/peru.png',
-    visited: true
+    visited: true,
+    visitedYear: 2013,
+    countryInfo: {
+      population: 33.0,
+      gdp: {
+        amount: "$244.4 billion",
+        worldRank: 41
+      },
+      interestingFact: "Peru is the world's largest producer of quinoa.",
+      governmentType: "Unitary presidential constitutional republic",
+      currency: "Peruvian sol",
+      languages: ["Spanish"]
+    }
   },
   {
     id: 'PT',
@@ -262,7 +646,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [39.3999, -8.2245],
     url: '/travel/portugal',
     thumbnailUrl: '/img/country-thumbs/portugal.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 10.28,
+      gdp: {
+        amount: "$244.4 billion",
+        worldRank: 43
+      },
+      interestingFact: "Portugal is the world's largest cork producer.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Euro",
+      languages: ["Portuguese"]
+    }
   },
   {
     id: 'RU',
@@ -270,7 +666,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [61.5240, 105.3188],
     url: '/travel/russia',
     thumbnailUrl: '/img/country-thumbs/russia.png',
-    visited: true
+    visited: true,
+    visitedYear: 2017,
+    countryInfo: {
+      population: 145.93,
+      gdp: {
+        amount: "$1.8 trillion",
+        worldRank: 11
+      },
+      interestingFact: "Russia is the world's largest country by land area.",
+      governmentType: "Unitary presidential constitutional republic",
+      currency: "Russian ruble",
+      languages: ["Russian"]
+    }
   },
   {
     id: 'ES',
@@ -278,7 +686,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [40.4637, -3.7492],
     url: '/travel/spain',
     thumbnailUrl: '/img/country-thumbs/spain.png',
-    visited: true
+    visited: true,
+    visitedYear: 3000,
+    countryInfo: {
+      population: 47.35,
+      gdp: {
+        amount: "$1.4 trillion",
+        worldRank: 13
+      },
+      interestingFact: "Spain is the world's largest producer of olive oil.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Euro",
+      languages: ["Spanish"]
+    }
   },
   {
     id: 'SE',
@@ -286,7 +706,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [60.1282, 18.6435],
     url: '/travel/sweden',
     thumbnailUrl: '/img/country-thumbs/sweden.png',
-    visited: true
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 10.45,
+      gdp: {
+        amount: "$584.4 billion",
+        worldRank: 24
+      },
+      interestingFact: "Sweden is the world's largest exporter of forest products.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Swedish krona",
+      languages: ["Swedish"]
+    }
   },
   {
     id: 'CH',
@@ -294,7 +726,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [46.8182, 8.2275],
     url: '/travel/switzerland',
     thumbnailUrl: '/img/country-thumbs/suisse.png',
-    visited: true
+    visited: true,
+    visitedYear: 2022,
+    countryInfo: {
+      population: 8.65,
+      gdp: {
+        amount: "$744.4 billion",
+        worldRank: 22
+      },
+      interestingFact: "Switzerland is the world's largest exporter of watches and clocks.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Swiss franc",
+      languages: ["German", "French", "Italian"]
+    }
   },
   {
     id: 'TZ',
@@ -302,7 +746,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [-6.3690, 34.8888],
     url: '/travel/tanzania',
     thumbnailUrl: '/img/country-thumbs/tanzania.png',
-    visited: true
+    visited: true,
+    visitedYear: 2021,
+    countryInfo: {
+      population: 60.8,
+      gdp: {
+        amount: "$144.4 billion",
+        worldRank: 74
+      },
+      interestingFact: "Tanzania is the world's largest producer of tanzanite.",
+      governmentType: "Unitary presidential constitutional republic",
+      currency: "Tanzanian shilling",
+      languages: ["Swahili", "English"]
+    }
   },
   {
     id: 'TH',
@@ -310,7 +766,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [15.8700, 100.9925],
     url: '/travel/thailand',
     thumbnailUrl: '/img/country-thumbs/thailand.png',
-    visited: true
+    visited: true,
+    visitedYear: 2015,
+    countryInfo: {
+      population: 69.95,
+      gdp: {
+        amount: "$444.4 billion",
+        worldRank: 25
+      },
+      interestingFact: "Thailand is the world's largest exporter of rice.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "Thai baht",
+      languages: ["Thai"]
+    }
   },
   {
     id: 'GB',
@@ -318,7 +786,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [55.3781, -3.4360],
     url: '/travel/united-kingdom',
     thumbnailUrl: '/img/country-thumbs/uk.png',
-    visited: true
+    visited: true,
+    visitedYear: 3000,
+    countryInfo: {
+      population: 67.88,
+      gdp: {
+        amount: "$3.2 trillion",
+        worldRank: 5
+      },
+      interestingFact: "The UK is the world's fifth largest economy in terms of purchasing power parity.",
+      governmentType: "Unitary parliamentary democracy",
+      currency: "British pound",
+      languages: ["English"]
+    }
   },
   {
     id: 'US',
@@ -326,7 +806,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [37.0902, -95.7129],
     url: '/travel/united-states',
     thumbnailUrl: '/img/country-thumbs/usa.png',
-    visited: true
+    visited: true,
+    visitedYear: 3000,
+    countryInfo: {
+      population: 331.9,
+      gdp: {
+        amount: "$23.4 trillion",
+        worldRank: 1
+      },
+      interestingFact: "The US is the world's largest economy in terms of nominal GDP.",
+      governmentType: "Federal presidential constitutional republic",
+      currency: "US dollar",
+      languages: ["English"]
+    }
   },
   {
     id: 'VA',
@@ -334,7 +826,19 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [41.9029, 12.4534],
     url: '/travel/vatican',
     thumbnailUrl: '/img/country-thumbs/vatican.png',
-    visited: true
+    visited: true,
+    visitedYear: 2013,
+    countryInfo: {
+      population: 0.8,
+      gdp: {
+        amount: "$14.4 billion",
+        worldRank: 150
+      },
+      interestingFact: "Vatican City is the smallest country in the world by land area.",
+      governmentType: "Unitary ecclesiastical state",
+      currency: "Euro",
+      languages: ["Italian"]
+    }
   },
   {
     id: 'VN',
@@ -342,6 +846,18 @@ export const travelLocations: TravelLocation[] = [
     coordinates: [14.0583, 108.2772],
     url: '/travel/vietnam',
     thumbnailUrl: '/img/country-thumbs/vietnam.png',
-    visited: true
+    visited: true,
+    visitedYear: 2015,
+    countryInfo: {
+      population: 97.34,
+      gdp: {
+        amount: "$344.4 billion",
+        worldRank: 42
+      },
+      interestingFact: "Vietnam is the world's largest producer of cashews.",
+      governmentType: "Unitary socialist republic",
+      currency: "Vietnamese dong",
+      languages: ["Vietnamese"]
+    }
   }
 ]; 

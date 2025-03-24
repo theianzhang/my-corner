@@ -1,19 +1,19 @@
 import dynamic from 'next/dynamic'
+import styles from './Globe.module.css'
+
+const GlobeLoading = () => (
+  <div className={styles.loadingContainer}>
+    <div className={styles.globeLoader}>
+      <div className={styles.ring}></div>
+      <div className={styles.ring}></div>
+      <div className={styles.ring}></div>
+    </div>
+  </div>
+)
 
 const Globe3D = dynamic(() => import('./Globe.client'), {
   ssr: false,
-  loading: () => (
-    <div style={{ 
-      width: '100vw', 
-      height: '50vh', 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center',
-      background: '#1A1A1A'
-    }}>
-      Loading Globe...
-    </div>
-  )
+  loading: GlobeLoading
 })
 
 export default Globe3D 

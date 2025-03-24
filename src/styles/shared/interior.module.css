@@ -18,8 +18,8 @@
 .styleLine {
     overflow: visible;
     border: none;
-    border-top: medium double #333;
-    color: #333;
+    border-top: medium double #666;  /* Darker line for dark mode */
+    color: #666;
     text-align: center;
 }
 
@@ -29,7 +29,8 @@
     position: relative;
     top: -0.7em;
     font-size: 1.5em;
-    background: #E9ECEF;
+    background: #121212;  /* Dark background to match theme */
+    color: #E9ECEF;  /* Light text color for dark mode */
 }
 
 /* Content styles */
@@ -37,12 +38,14 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
+    color: #E9ECEF;  /* Light text color for dark mode */
 }
 
 .container {
     max-width: 100%;
     overflow-x: hidden;
     padding-top: 63px;  /* Exact navbar height */
+    color: #E9ECEF;  /* Light text color for dark mode */
 }
 
 .mediaContainer {
@@ -56,34 +59,38 @@
 .heroImage, .image {
     width: 100%;
     height: auto;
-    max-width: 100%;  /* Prevent image from exceeding container width */
+    max-width: min(100%, 1200px);  /* Limit maximum width on desktop */
     object-fit: contain;  /* Maintain aspect ratio without cropping */
+    border-radius: 8px;
 }
 
 .header {
     text-align: center;
     margin: 2rem 0 3rem;
+    color: #E9ECEF;  /* Light text color for dark mode */
 }
 
 .header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    color: #E9ECEF;  /* Light text color for dark mode */
 }
 
 .header h2 {
     font-size: 1.5rem;
-    color: #666;
+    color: #B0B0B0;  /* Lighter gray for dark mode */
     margin-bottom: 0.5rem;
 }
 
 .header h5 {
     font-size: 1rem;
-    color: #888;
+    color: #8A8A8A;  /* Adjusted gray for dark mode */
     font-weight: normal;
 }
 
 .content p {
     margin-bottom: 2rem;
+    color: #E9ECEF;  /* Light text color for dark mode */
 }
 
 .content a {
@@ -92,7 +99,7 @@
 }
 
 .content a:hover {
-    color: var(--foreground);
+    color: #E9ECEF;  /* Light color on hover for dark mode */
     text-decoration: underline;
 }
 
@@ -153,12 +160,13 @@
 .table th,
 .table td {
   padding: 0.75rem;
-  border: 1px solid #dee2e6;
+  border: 1px solid #444;  /* Darker border for dark mode */
   text-align: left;
+  color: #E9ECEF;  /* Light text color for dark mode */
 }
 
 .table th {
-  background-color: #f8f9fa;
+  background-color: #1E1E1E;  /* Dark background for header */
 }
 
 .sketchfabContainer {
@@ -181,8 +189,9 @@
 .conclusion {
   margin: 3rem 0;
   padding: 1rem;
-  background-color: #f8f9fa;
+  background-color: #1E1E1E;  /* Dark background */
   border-radius: 4px;
+  color: #E9ECEF;  /* Light text color for dark mode */
 }
 
 @media (max-width: 768px) {
