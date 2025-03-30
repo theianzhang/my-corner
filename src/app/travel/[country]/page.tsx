@@ -4,62 +4,83 @@ import QuickLook from '@/components/Country/QuickLook'
 import { travelLocations } from '@/data/travelLocations'
 import { notFound } from 'next/navigation'
 
-interface CountryPageProps {
-  params: {
-    country: string;
-  }
-}
+// Define the types for the RESOLVED params and searchParams
+type ResolvedParams = {
+  country: string;
+};
+type ResolvedSearchParams = {
+  [key: string]: string | string[] | undefined
+};
+
+// Define the props type according to Next.js 15 for async pages
+// Note: params and searchParams are now Promises
+type CountryPageProps = {
+  params: Promise<ResolvedParams>;
+  searchParams: Promise<ResolvedSearchParams>; // Type it even if not used immediately
+};
 
 export function generateStaticParams() {
+  // This function remains the same - it returns the actual param values, not promises
   return travelLocations.map((location) => ({
-    country: location.url.split('/').pop()
-  }))
+    country: location.url.split('/').pop()!, // Add non-null assertion if sure
+  }));
 }
 
-export default function CountryPage({ params }: CountryPageProps) {
-  // Find the country data
+// Change the function signature to accept a single props object
+export default async function CountryPage(props: CountryPageProps) {
+  // --- Await the props ---
+  const params = await props.params;
+  // const searchParams = await props.searchParams; // Await if you need searchParams
+
+  // --- Now use the resolved params ---
   const countryData = travelLocations.find(
     location => location.url === `/travel/${params.country}`
-  )
+  );
 
   if (!countryData) {
-    notFound()
+    notFound();
   }
 
   // Format visited years
-  const formattedYears = Array.isArray(countryData.visitedYear) 
-    ? countryData.visitedYear.join(', ') 
-    : countryData.visitedYear.toString()
+  const formattedYears = Array.isArray(countryData.visitedYear)
+    ? countryData.visitedYear.join(', ')
+    : countryData.visitedYear.toString();
 
   // Format population in millions with 2 decimal places
-  const formattedPopulation = (countryData.countryInfo.population).toFixed(2)
+  // Ensure countryData.countryInfo.population is a number before calling toFixed
+  const populationValue = typeof countryData.countryInfo.population === 'number'
+     ? countryData.countryInfo.population
+     : parseFloat(countryData.countryInfo.population as string); // Or handle error/default
+
+  const formattedPopulation = !isNaN(populationValue) ? populationValue.toFixed(2) : 'N/A';
+
 
   const facts = [
-    { 
-      label: 'Population', 
-      value: `${formattedPopulation} million` 
+    {
+      label: 'Population',
+      value: `${formattedPopulation} million`
     },
-    { 
-      label: 'GDP', 
-      value: `${countryData.countryInfo.gdp.amount} (Rank: ${countryData.countryInfo.gdp.worldRank})` 
+    {
+      label: 'GDP',
+      value: `${countryData.countryInfo.gdp.amount} (Rank: ${countryData.countryInfo.gdp.worldRank})`
     },
-    { 
-      label: 'Government Type', 
-      value: countryData.countryInfo.governmentType 
+    {
+      label: 'Government Type',
+      value: countryData.countryInfo.governmentType
     },
-    { 
-      label: 'Currency', 
-      value: countryData.countryInfo.currency 
+    {
+      label: 'Currency',
+      value: countryData.countryInfo.currency
     },
-    { 
-      label: 'Languages', 
-      value: countryData.countryInfo.languages.join(', ') 
+    {
+      label: 'Languages',
+      value: countryData.countryInfo.languages.join(', ')
     },
-    { 
-      label: 'Fun Fact', 
-      value: countryData.countryInfo.interestingFact 
+    {
+      label: 'Fun Fact',
+      value: countryData.countryInfo.interestingFact
     }
-  ]
+  ];
 
   return (
     <div className={styles.container}>
@@ -69,7 +90,7 @@ export default function CountryPage({ params }: CountryPageProps) {
           alt={`${countryData.name} landscape`}
           className={styles.heroImage}
           fill
-          priority
+          priority // Keep priority for LCP
         />
         <div className={styles.heroOverlay}>
           <h1 className={styles.title}>{countryData.name}</h1>
@@ -79,7 +100,7 @@ export default function CountryPage({ params }: CountryPageProps) {
 
       <div className={styles.content}>
         <QuickLook facts={facts} />
-        
+
         <article className={styles.journalEntry}>
           <p>
             Your travel journal entry will go here. This is a placeholder text that
@@ -93,5 +114,5 @@ export default function CountryPage({ params }: CountryPageProps) {
         </article>
       </div>
     </div>
-  )
-} 
+  );
+}

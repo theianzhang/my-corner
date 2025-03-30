@@ -6,67 +6,69 @@ export default function MovingToEuropeBlogPost() {
     <main className={styles.main}>
       <div className={styles.content}>
         <article className={styles.article}>
-          {/* <div className={styles.header}>
-            <h1>The European Trade-off</h1>
+          <div className={styles.header}>
+            <h1>The Paris Trade-off</h1>
             <h5>2025</h5>
           </div>
 
           <div className={styles.body}>
             <p>
-              I've spent almost 3 years in Paris as of this writing. The question I get asked most often
-              is whether I like the US or France more. My answer is always that it's just different.
+              My 3 year journey in Paris is coming to an end as of this writing. With the current climate of 
+              the US, I've been asked more than ever whether I would recommend moving to Europe.
+              I never have a good answer to this question.
+
+              Because a life change like this is a series of trade-offs. 
+              You leave behind X, and you adjust to Y. Neither X nor Y is correct-- 
+              it's simply what fits your current situation best.
+
+              <br /><br />
+              If you're <Link href="/about">like me</Link>, you might find the journey rewarding, but I'd 
+              be remiss to not mention that my 3 years here was a privileged experience. 
+
+              I quit my cushy tech job in the US during the pandemic. My savings from that job allowed me to live 
+              in Paris <strong>without working</strong> for my entire stay here. I got to 
+              <Link href="/highlights/c1"> learn French</Link>, party, go on alpine adventures,
+              and explore a good chunk of the world without any financial pressure. 
+
+              <br /><br /> 
+ 
+              Are you in the same boat? Is punting some of your career and financial goals down the road 
+              worth it? Are you ok with taking a 20-50% pay cut in exchange for slower days, more vacation 
+              time, and 2 hour lunch breaks? 
+
+              When I moved here, I was in my late 20s, single-ish with no kids, 
+              and was prepared to make zero dollars for an extended period of time in order to take a 
+              shot at all the creative projects sitting in my mental drawer since I was a kid.
 
               <br /><br /> 
 
-              I believe a move to Europe, or anywhere, should be viewed as a series of trade-offs. You leave behind X, 
-              but you have to adjust to Y. Neither X nor Y is correct, or better/worse, 
-              it's just simply a different way of living. 
-              Whether that trade-off makes sense to you depends on who you are and your current situation.
+              No wife+kids, no 9-5, plus an intense desire to create...meets the 
+              city of love, a low cost of living, and one of the densest concentrations of creatives
+              anywhere in the world. I mean I basically took a creative sabbatical.
+
+              My entire day was devoted to writing <Link href="https://thetrilinguez.com">children's books</Link>,
+              screenplays, and poetry. I picked up the guitar again. 
+              I found in Paris an extraordinary community of creatives, but it took me
+              years of living here to find them.
 
               <br /><br />
+
+              That isn't to say there aren't other magical combos out there. 
+              I know plenty of well-adjusted expats from America, esp those who work in marketing or fashion
+              , who love their life in Paris. I also have heard of horror stories from people who left 
+              Paris with nothing but deep depression.
               
-              I try to avoid platitudes here, and instead attempt to, for those <Link href="/about">like me</Link>, 
-              cover the most stark trade-offs I experienced. I roughly group as below:
+              <br /><br /> 
+              
+              So, yes, Paris was the right move at the right time for me. 
+              Should you do the same?
+
+              The only advice I feel qualified to give is actually in the form of a question: 
+              what would "8-year-old-you" and "80-year-old-you" think if you took the plunge? 
+              
             </p>
-
-            <ul>
-              <li>Lifestyle – Daily routine and pacing</li>
-              <li>Career – Work culture, salaries, and hierarchy.</li>
-              <li>Social Norms – Relationships, gender dynamics, and finding your people.</li>
-              <li>Healthcare & Citizenship – Medical care and bureaucracy.</li>
-            </ul>
-
-            <h2>1. Social Norms</h2>
-            <p>
-                <strong>Leave Behind:</strong> high intensity <br />
-                <strong>Adjust To:</strong> low intensity <br /><br />
-
-                In the States, it's always "what's the move." Festival, cool restaurant, dinner party, day trip, etc.
-                The activiation energy in Europe is much higher for the same events, esp. when a chill apero 
-                at your neighborhood cafe is a 3 minute walk and a 5 euro pint. <br /><br />
-
-                Dating is 
-            </p>
-
-            <h2>2. Career</h2>
-            <p>
-                <strong>Leave Behind:</strong> lead and hustle <br />
-                <strong>Adjust To:</strong> follow and enjoy <br />
-            </p>
-
-            <h2>3. Healthcare & Citizenship</h2>
-            <p>
-                <strong>Leave Behind:</strong> the ability to use technology<br />
-                <strong>Adjust To:</strong> a new way of using technology <br />
-            </p>    
-
-            <h2>4. Arts and Culture</h2>
-            <p>
-                <strong>Leave Behind:</strong> the ability to use technology<br />
-                <strong>Adjust To:</strong> a new way of using technology <br />
-            </p>    
             
-          </div> */}   
+          </div>
         </article>
       </div>
     </main>

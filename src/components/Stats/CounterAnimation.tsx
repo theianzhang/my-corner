@@ -23,13 +23,14 @@ export default function CounterAnimation({ end, duration = 2000 }: CounterAnimat
       { threshold: 0.1 }
     )
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current)
+    const element = elementRef.current
+    if (element) {
+      observer.observe(element)
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current)
+      if (element) {
+        observer.unobserve(element)
       }
     }
   }, [])

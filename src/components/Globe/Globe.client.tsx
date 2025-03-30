@@ -24,8 +24,6 @@ interface GeoJSONData extends GeoJSONFeature {
   isVisited: boolean;
 }
 
-type GlobeMaterial = THREE.MeshBasicMaterial | THREE.MeshPhongMaterial | THREE.MeshStandardMaterial;
-
 type GlobeInstance = ThreeGlobe & {
   globeMaterial: () => THREE.Material;
 }
