@@ -7,7 +7,7 @@ export default function MovingToEuropeBlogPost() {
       <div className={styles.content}>
         <article className={styles.article}>
           <div className={styles.header}>
-            <h1>The Paris Trade-off</h1>
+            <h1>Is Paris Always a Good Idea?</h1>
             <h5>2025</h5>
           </div>
 
@@ -37,8 +37,8 @@ export default function MovingToEuropeBlogPost() {
               time, and 2 hour lunch breaks? 
 
               When I moved here, I was in my late 20s, single-ish with no kids, 
-              and was prepared to make zero dollars for an extended period of time in order to take a 
-              shot at all the creative projects sitting in my mental drawer since I was a kid.
+              and I was fully prepared to make zero dollars for an extended period of time in order to take a 
+              shot at all the creative projects sitting in my mental drawer.
 
               <br /><br /> 
 
@@ -48,14 +48,14 @@ export default function MovingToEuropeBlogPost() {
 
               My entire day was devoted to writing <Link href="https://thetrilinguez.com">children's books</Link>,
               screenplays, and poetry. I picked up the guitar again. 
-              I found in Paris an extraordinary community of creatives, but it took me
-              years of living here to find them.
+              I found in Paris an extraordinary community of artists, musicians, writers, and hustlers. It was
+              a magical time.
 
               <br /><br />
 
               That isn't to say there aren't other magical combos out there. 
               I know plenty of well-adjusted expats from America, esp those who work in marketing or fashion
-              , who love their life in Paris. I also have heard of horror stories from people who left 
+              , who love their life in Paris. I have also witnessed first-hand expats leaving 
               Paris with nothing but deep depression.
               
               <br /><br /> 
