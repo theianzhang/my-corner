@@ -20,7 +20,13 @@ export default function BlogPage() {
               <span className={styles.date}>2024</span>
             </Link>
           </article>
-
+          <article className={styles.post}>
+            <Link href="/blog/long-tail-drift">
+              <h2>Long Tail Drift</h2>
+              <p>When to know you've gone too far</p>
+              <span className={styles.date}>2023</span>
+            </Link>
+          </article>
         </div>
       </div>
     </main>

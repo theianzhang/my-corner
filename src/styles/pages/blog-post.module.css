@@ -117,4 +117,26 @@
   .post h2 {
     font-size: 1.5rem;
   }
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #888;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding: 6px 0;
+  position: relative;
+}
+
+.backLink:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .backLink {
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
 } 

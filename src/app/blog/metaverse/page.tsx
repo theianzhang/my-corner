@@ -5,6 +5,7 @@ export default function MetaverseBlogPost() {
   return (
     <main className={styles.main}>
       <div className={styles.content}>
+        <Link href="/blog" className={styles.backLink}>← Back</Link>
         <article className={styles.article}>
           <div className={styles.header}>
             <h1>The Metaverse in Retrospect</h1>
