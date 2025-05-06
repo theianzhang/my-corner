@@ -1,12 +1,46 @@
+import styles from '@/styles/pages/movie.module.css';
+
+// Array of Otioppip still paths
+const stills = [
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.1.1.png',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.2.png',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.4.png',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.5.png',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.7.png',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.10.png',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.11.png',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.12.png',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.13.png',
+];
+
 export default function OtioppipPage() {
   return (
-    <main style={{ maxWidth: 600, margin: '0 auto', padding: '2rem' }}>
-      <h1>Otioppip</h1>
-      <h3>Short Film (2025)</h3>
-      <p>A story about [insert your logline or summary here].</p>
-      <div style={{ margin: '2rem 0' }}>
-        {/* Replace the src URL with your private YouTube link */}
-        <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 8, marginBottom: 24 }}>
+    <main className={styles.main}>
+      {/* 9-still grid */}
+      <div className={styles.stillGrid}>
+        {stills.map((src, i) => (
+          <div className={styles.stillCell} key={i}>
+            <img
+              src={src}
+              alt={`Otioppip still ${i + 1}`}
+              className={styles.stillImg}
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Title */}
+      <h1 className={styles.title}>OTIOPPIP</h1>
+
+      {/* Summary */}
+      <p className={styles.summary}>
+        Two cannibals order a very specific meal.
+      </p>
+
+      {/* YouTube embed */}
+      <div className={styles.youtubeEmbed}>
+        <div className={styles.youtubeContainer}>
           <iframe
             src="https://www.youtube.com/embed/[YOUR_PRIVATE_VIDEO_ID]"
             title="Otioppip Private Video"
@@ -17,8 +51,6 @@ export default function OtioppipPage() {
           />
         </div>
       </div>
-      <h4>About the Film</h4>
-      <p>[Write your director's statement, behind-the-scenes, or any info about Otioppip here.]</p>
     </main>
   );
 } 

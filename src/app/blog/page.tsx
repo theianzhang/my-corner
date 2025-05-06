@@ -16,7 +16,7 @@ export default function BlogPage() {
           <article className={styles.post}>
             <Link href="/blog/metaverse">
               <h2>The Metaverse in Retrospect</h2>
-              <p>Reflections on the future of immersive technology after leaving Google's AR team</p>
+              <p>Post-Google thoughts</p>
               <span className={styles.date}>2024</span>
             </Link>
           </article>
@@ -25,6 +25,13 @@ export default function BlogPage() {
               <h2>Long Tail Drift</h2>
               <p>When to know you've gone too far</p>
               <span className={styles.date}>2023</span>
+            </Link>
+          </article>
+          <article className={styles.post}>
+            <Link href="/blog/fontainebleau">
+              <h2>Fontainebleau</h2>
+              <p>No car trip to Bleau from Paris</p>
+              <span className={styles.date}>2022</span>
             </Link>
           </article>
         </div>

@@ -24,52 +24,42 @@ export default function MovingToEuropeBlogPost() {
 
               I quit my cushy tech job in the US during the pandemic. My savings from that job allowed me to live 
               in Paris <strong>without working</strong> for my entire stay. I got to 
-              <Link href="/highlights/c1"> learn French</Link>, party, go on alpine adventures,
-              and explore a good chunk of <Link href="/travel">the world</Link> without any financial pressure. 
+              <Link href="/highlights/c1"> learn French</Link>, party, go on alpine adventures, write, play guitar,
+              film some <Link href="/highlights/movies"> movies</Link>. I found in Paris an extraordinary community
+               of artists, musicians, writers, and hustlers, and I explored a 
+               good chunk of <Link href="/travel">the world</Link> outside of the Hexagon.
 
               <br /><br />
 
-              No wife+kids, no 9-5, plus an intense desire to create...meets the 
-              city of love, a low cost of living, and one of the densest concentrations of creatives
-              anywhere in the world. This was a magical combination.
-
-              My entire day was devoted to writing <Link href="https://thetrilinguez.com">children's books</Link>,
-              screenplays, and poetry. I picked up the guitar again. I filmed some 
-              <Link href="/highlights/movies"> movies</Link>.
-              I found in Paris an extraordinary community of artists, musicians, writers, and hustlers. 
-
-              <br /><br />
-
-              But I want to be real: for every expat I've seen find their groove, 2 or 3 more pack up and 
+              But for every expat I've seen find their groove, 2 or 3 more pack up and 
               leave with nothing but a handful of depression. 
               Europe isn't an anxiety antidote for whatever's going on in the States. 
               The <Link href="https://www.economist.com/graphic-detail/2025/02/28/hard-right-parties-are-now-europes-most-popular">far right </Link> 
-              is on the rise here too, immigration is trending towards more restriction, 
-              and the "fresh start" fantasy can get chewed up fast by bureaucracy, language barriers,
-              and the simple fact that you're starting from scratch.
+              is on the rise here too, immigration is only getting more restrictive, 
+              and the "fresh start" fantasy dies the moment you have to prepare your first dossier.
 
               <br /><br />
 
               Obviously, if you're facing genuine harm at the hands of the new government, come on over! In fact, 
               message me, and I'll do my best to introduce you to people I know and trust that could help. 
-              However, if, you're feeling restless/anxious in the U.S., you should ask yourself if your day-to-day life has 
-              meaningfully changed. Or maybe you're morally opposed to this government -- to the extent you're 
+              However, if you're feeling restless/anxious in the U.S., you should ask yourself if your day-to-day 
+              life has meaningfully changed. Maybe you're morally opposed to this government -- to the extent you're 
               considering voting with your feet.
 
               <br /><br />
 
               Can you take a massive pay cut, miss weddings and birthdays, learn a new language, 
-              and completely uproot your family's life? All in the context of a political climate that is becoming 
-              just as hostile to your values as it is in the U.S.?
-              My hunch for most of you is that when the rubber meets the road, the answer is no.
+              and completely uproot your family? All in the context of a political climate that is 
+              trending towards that of the U.S.? My hunch for most of you is that when the rubber meets the road, 
+              the answer is no.
               
               <br /><br />
        
-              If you decide that is you, know the grass isn't greener in Europe. It's just a different shade. 
-              The folks I've seen acually make it here didn't wait for Paris to hand them a new life —
-              they built it, friend by friend, hustle by hustle. It's a years-long effort.
-              Before you book that one-way ticket, know that finding your footing here will take until at 
-              least the end of this administration. 
+              If you do decide Paris is a good idea, know your chances are much better if you 
+              work in tourism, fashion, marketing, or the creative arts. Regardless of your industry, 
+              the folks I've seen thrive here didn't wait for the city to hand them a new life.
+              They built it friend by friend, hustle by hustle. It's a years-long effort.
+              Just know that finding your footing here will take until at least the end of this administration. 
               
             </p>
             

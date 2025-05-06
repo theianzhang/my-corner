@@ -1,5 +1,4 @@
 import styles from '@/styles/pages/movie.module.css';
-import CustomLoversVisual from './CustomLoversVisual';
 
 const stills = Array.from({ length: 9 }, (_, i) => `/img/movies/mapgie/film-stills_1.1.${i + 1}.png`);
 
@@ -29,11 +28,6 @@ export default function MagpiePage() {
        Inspired by the legend behind Chinese Valentine’s Day, this contemporary adaptation takes an old story 
        into a new city where even soulmates slip past one other.
       </p>
-
-      {/* Custom visual */}
-      <div className={styles.customVisual}>
-        <CustomLoversVisual />
-      </div>
 
       {/* YouTube embed */}
       <div className={styles.youtubeEmbed}>
