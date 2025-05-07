@@ -17,7 +17,7 @@ export default function Navbar() {
       <div className={styles.containerFluid}>
         <Link href="/" className={styles.navbarBrand} onClick={handleLinkClick}>
           <Image 
-            src="/img/home/logo-black.png" 
+            src="/img/home/logo-black.webp" 
             width={30} 
             height={30} 
             alt="Logo"

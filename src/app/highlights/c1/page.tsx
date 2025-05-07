@@ -55,7 +55,7 @@ export default function C1Page() {
 
         <div className={styles.mediaContainer}>
           <Image
-            src="/img/c1/c1-reussite.jpeg"
+            src="/img/c1/c1-reussite.webp"
             alt="C1 Success Certificate"
             width={1200}
             height={800}

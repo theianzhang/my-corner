@@ -1,16 +1,17 @@
 import styles from '@/styles/pages/movie.module.css';
+import Image from 'next/image'
 
 // Array of Otioppip still paths
 const stills = [
-  '/img/movies/otioppip/Still 2025-04-30 092824_1.1.1.png',
-  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.2.png',
-  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.4.png',
-  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.5.png',
-  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.7.png',
-  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.10.png',
-  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.11.png',
-  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.12.png',
-  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.13.png',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.1.1.webp',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.2.webp',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.4.webp',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.5.webp',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.7.webp',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.10.webp',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.11.webp',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.12.webp',
+  '/img/movies/otioppip/Still 2025-04-30 092824_1.3.13.webp',
 ];
 
 export default function OtioppipPage() {
@@ -20,10 +21,12 @@ export default function OtioppipPage() {
       <div className={styles.stillGrid}>
         {stills.map((src, i) => (
           <div className={styles.stillCell} key={i}>
-            <img
+            <Image
               src={src}
               alt={`Otioppip still ${i + 1}`}
               className={styles.stillImg}
+              width={400}
+              height={400}
               loading="lazy"
             />
           </div>

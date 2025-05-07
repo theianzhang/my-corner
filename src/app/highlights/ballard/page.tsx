@@ -7,7 +7,7 @@ export default function BallardPage() {
     <div className={styles.container}>
       <div className={styles.mediaContainer}>
         <Image
-          src="/img/art/mural.jpg"
+          src="/img/art/mural.webp"
           alt="Chinese Zodiac Mural"
           width={1200}
           height={600}

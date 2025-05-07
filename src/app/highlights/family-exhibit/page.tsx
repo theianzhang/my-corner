@@ -26,7 +26,7 @@ export default function FamilyExhibitPage() {
     <div className={styles.container}>
       <div className={styles.mediaContainer}>
         <Image
-          src="/img/art/fam-exhibit-banner.jpg"
+          src="/img/art/fam-exhibit-banner.webp"
           alt="Family Exhibit Banner"
           width={1200}
           height={600}
@@ -99,7 +99,7 @@ export default function FamilyExhibitPage() {
 
           <div className={styles.mediaContainer}>
             <Image
-              src="/img/home/fam-exhibit.jpg"
+              src="/img/home/fam-exhibit.webp"
               alt="Family Exhibit"
               width={1200}
               height={800}
@@ -140,7 +140,7 @@ export default function FamilyExhibitPage() {
 
           <div className={styles.mediaContainer}>
             <Image
-              src="/img/art/lunar-new-year.jpg"
+              src="/img/art/lunar-new-year.webp"
               alt="Lunar New Year"
               width={1200}
               height={800}
@@ -181,7 +181,7 @@ export default function FamilyExhibitPage() {
 
           <div className={styles.mediaContainer}>
             <Image
-              src="/img/art/space-needle-dinner.jpg"
+              src="/img/art/space-needle-dinner.webp"
               alt="Space Needle Dinner"
               width={1200}
               height={800}

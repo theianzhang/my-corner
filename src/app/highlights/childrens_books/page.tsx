@@ -7,7 +7,7 @@ export default function ChildrensBooksPage() {
     <div className={styles.container}>
       <div className={styles.mediaContainer}>
         <Image
-          src="/img/books/tb-look-tin-eli.png"
+          src="/img/books/tb-look-tin-eli.webp"
           alt="Children's Book Preview"
           width={1200}
           height={600}

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import styles from '@/styles/shared/interior.module.css'
 
 export default function MoviesHighlightPage() {
@@ -7,7 +6,7 @@ export default function MoviesHighlightPage() {
     <div className={styles.container}>
       <div className={styles.mediaContainer}>
         <Image
-          src="/img/art/movie_placeholder.jpg"
+          src="/img/art/movie_placeholder.webp"
           alt="Movie Project Placeholder"
           width={1200}
           height={600}

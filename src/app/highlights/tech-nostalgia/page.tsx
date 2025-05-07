@@ -7,7 +7,7 @@ export default function TechNostalgiaPage() {
     <div className={styles.container}>
       <div className={styles.mediaContainer}>
         <Image
-          src="/img/art/nostalgia-banner.jpg"
+          src="/img/art/nostalgia-banner.webp"
           alt="Tech Nostalgia Banner"
           width={1200}
           height={600}
@@ -30,21 +30,19 @@ export default function TechNostalgiaPage() {
           <hr className={styles.styleLine} />
         </div>
 
-        <div className={styles.carousel}>
-          <div className={styles.carouselItem}>
-            <Image src="/img/art/calligraphy.jpg" alt="Calligraphy" width={1200} height={800} className={styles.image} />
+        {/* 4-image grid, larger images */}
+        <div className={styles.photoGrid}>
+          <div className={styles.gridItem}>
+            <Image src="/img/art/calligraphy.webp" alt="Calligraphy" width={600} height={600} className={styles.gridImage} />
           </div>
-          <div className={styles.carouselItem}>
-            <Image src="/img/art/floppy.jpg" alt="Floppy Disk" width={1200} height={800} className={styles.image} />
+          <div className={styles.gridItem}>
+            <Image src="/img/art/floppy.webp" alt="Floppy Disk" width={600} height={600} className={styles.gridImage} />
           </div>
-          <div className={styles.carouselItem}>
-            <Image src="/img/art/pencils.jpg" alt="Pencils" width={1200} height={800} className={styles.image} />
+          <div className={styles.gridItem}>
+            <Image src="/img/art/pencils.webp" alt="Pencils" width={600} height={600} className={styles.gridImage} />
           </div>
-          <div className={styles.carouselItem}>
-            <Image src="/img/art/vhs.jpg" alt="VHS" width={1200} height={800} className={styles.image} />
-          </div>
-          <div className={styles.carouselItem}>
-            <Image src="/img/art/meade.jpg" alt="Meade" width={1200} height={800} className={styles.image} />
+          <div className={styles.gridItem}>
+            <Image src="/img/art/meade.webp" alt="Meade" width={600} height={600} className={styles.gridImage} />
           </div>
         </div>
 

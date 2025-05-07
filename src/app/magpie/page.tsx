@@ -1,6 +1,7 @@
 import styles from '@/styles/pages/movie.module.css';
+import Image from 'next/image'
 
-const stills = Array.from({ length: 9 }, (_, i) => `/img/movies/mapgie/film-stills_1.1.${i + 1}.png`);
+const stills = Array.from({ length: 9 }, (_, i) => `/img/movies/mapgie/film-stills_1.1.${i + 1}.webp`);
 
 export default function MagpiePage() {
   return (
@@ -9,10 +10,12 @@ export default function MagpiePage() {
       <div className={styles.stillGrid}>
         {stills.map((src, i) => (
           <div className={styles.stillCell} key={i}>
-            <img
+            <Image
               src={src}
               alt={`Magpie still ${i + 1}`}
               className={styles.stillImg}
+              width={400}
+              height={400}
               loading="lazy"
             />
           </div>
@@ -25,9 +28,14 @@ export default function MagpiePage() {
       {/* Summary */}
       <p className={styles.summary}>
        In modern-day Paris, two lovers struggle to stay connected as life pulls them in different directions. 
-       Inspired by the legend behind Chinese Valentine’s Day, this contemporary adaptation takes an old story 
+       Inspired by the legend behind Chinese Valentine's Day, this contemporary adaptation takes an old story 
        into a new city where even soulmates slip past one other.
       </p>
+
+      {/* Custom visual */}
+      <div className={styles.customVisual}>
+        {/* Custom visual removed as per previous request */}
+      </div>
 
       {/* YouTube embed */}
       <div className={styles.youtubeEmbed}>

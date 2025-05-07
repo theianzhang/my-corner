@@ -14,8 +14,8 @@ export default function FontainebleauBlogPost() {
 
           <div className={styles.body}>
             <p>
-              Fellow grimpeurs! Howdy. I wrote this quick FAQ for friends looking to get sendy
-              in Fontainebleau. Things change quickly out there -- old routes wear down, new beta opens up, etc. 
+              Fellow grimpeurs! Howdy. I wrote this for friends looking to get sendy
+              in Fontainebleau. Things change quickly out there -- old routes wear down, new beta opens up. 
               Please do your research ahead of time! At least at the time of this writing, there is a great  
               <Link href="https://www.facebook.com/groups/FontainebleauClimbingPage/"> facebook group</Link> to check
               out before you go. You can find others to climb with there or just ask questions.
@@ -33,10 +33,11 @@ export default function FontainebleauBlogPost() {
               </li>
               <li>You can, and should, research routes before you go. 
                 <Link href="https://bleau.info"> Bleau.info</Link> is great, and I've heard 
-                <Link href="https://www.boolder.com"> Boolder</Link>
+                <Link href="https://www.boolder.com"> Boolder </Link>
                 is the new hotness. Note: I haven't personally used Boolder.
               </li>
-              <li>Get a crash pad. I go to 
+              <li>Crash pads are <strong>sometimes</strong> available via rental companies
+              near the metro station in Font. I recommend getting them before hand in Paris. I go to 
                 <Link href="https://maps.app.goo.gl/erFVxNNdvP3XZEaa9"> La Haute Route</Link> near Bastille.
                 They are super nice dudes and rent them for 10€/day.
               </li>

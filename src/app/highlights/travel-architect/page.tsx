@@ -6,7 +6,7 @@ export default function TravelArchitectPage() {
     <div className={styles.container}>
       <div className={styles.mediaContainer}>
         <Image
-          src="/img/travel-architect/cherry-blossoms.png"
+          src="/img/travel-architect/cherry-blossoms.webp"
           alt="Cherry Blossoms"
           width={1200}
           height={600}
@@ -45,7 +45,7 @@ export default function TravelArchitectPage() {
 
         <div className={styles.mediaContainer}>
           <Image
-            src="/img/travel-architect/hand-model-1.png"
+            src="/img/travel-architect/hand-model-1.webp"
             alt="Hand Model"
             width={1200}
             height={800}
@@ -68,7 +68,7 @@ export default function TravelArchitectPage() {
 
           <div className={styles.mediaContainer}>
             <Image
-              src="/img/travel-architect/product-framework.png"
+              src="/img/travel-architect/product-framework.webp"
               alt="Product Framework"
               width={1200}
               height={800}
@@ -84,7 +84,7 @@ export default function TravelArchitectPage() {
         <section className={styles.section}>
           <div className={styles.researchHeader}>
             <Image
-              src="/img/travel-architect/research-logo.png"
+              src="/img/travel-architect/research-logo.webp"
               alt="Research Logo"
               width={100}
               height={100}
@@ -101,7 +101,7 @@ export default function TravelArchitectPage() {
           <div className={styles.personaSection}>
             <div className={styles.mediaContainer}>
               <Image
-                src="/img/travel-architect/abroad-annie.png"
+                src="/img/travel-architect/abroad-annie.webp"
                 alt="Abroad Annie"
                 width={800}
                 height={400}
@@ -120,7 +120,7 @@ export default function TravelArchitectPage() {
           <div className={styles.personaSection}>
             <div className={styles.mediaContainer}>
               <Image
-                src="/img/travel-architect/business-bobby.png"
+                src="/img/travel-architect/business-bobby.webp"
                 alt="Business Bobby"
                 width={800}
                 height={400}
@@ -139,7 +139,7 @@ export default function TravelArchitectPage() {
           <div className={styles.personaSection}>
             <div className={styles.mediaContainer}>
               <Image
-                src="/img/travel-architect/cultured-cranston.png"
+                src="/img/travel-architect/cultured-cranston.webp"
                 alt="Cultured Cranston"
                 width={800}
                 height={400}
@@ -159,7 +159,7 @@ export default function TravelArchitectPage() {
         <section className={styles.section}>
           <div className={styles.researchHeader}>
             <Image
-              src="/img/travel-architect/research-logo.png"
+              src="/img/travel-architect/research-logo.webp"
               alt="Research Logo"
               width={100}
               height={100}
@@ -174,7 +174,7 @@ export default function TravelArchitectPage() {
 
           <div className={styles.mediaContainer}>
             <Image
-              src="/img/travel-architect/mobile-behavior-segment-2.png"
+              src="/img/travel-architect/mobile-behavior-segment-2.webp"
               alt="Mobile Behavior Segment"
               width={1200}
               height={800}
@@ -191,7 +191,7 @@ export default function TravelArchitectPage() {
 
           <div className={styles.mediaContainer}>
             <Image
-              src="/img/travel-architect/unit-spend.png"
+              src="/img/travel-architect/unit-spend.webp"
               alt="Unit Spend"
               width={1200}
               height={800}
@@ -231,7 +231,7 @@ export default function TravelArchitectPage() {
         <section className={styles.section}>
           <div className={styles.researchHeader}>
             <Image
-              src="/img/travel-architect/develop-logo.png"
+              src="/img/travel-architect/develop-logo.webp"
               alt="Development Logo"
               width={100}
               height={100}
@@ -264,7 +264,7 @@ export default function TravelArchitectPage() {
 
           <div className={styles.mediaContainer}>
             <Image
-              src="/img/travel-architect/app-analytics-overview.png"
+              src="/img/travel-architect/app-analytics-overview.webp"
               alt="App Analytics Overview"
               width={1200}
               height={800}
@@ -274,7 +274,7 @@ export default function TravelArchitectPage() {
 
           <div className={styles.mediaContainer}>
             <Image
-              src="/img/travel-architect/DAU.png"
+              src="/img/travel-architect/DAU.webp"
               alt="Daily Active Users"
               width={1200}
               height={800}

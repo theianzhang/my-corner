@@ -12,7 +12,7 @@ export default function About() {
           <div className={styles.profileImage}>
             {/* Replace with your actual image */}
             <Image 
-              src="/img/about/avatar-expressionism.jpeg" 
+              src="/img/about/avatar-expressionism.webp" 
               alt="Profile Photo" 
               fill 
               className={styles.image}
