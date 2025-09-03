@@ -859,5 +859,145 @@ export const travelLocations: TravelLocation[] = [
       currency: "Vietnamese dong",
       languages: ["Vietnamese"]
     }
+  },
+  {
+    id: 'SM',
+    name: 'San Marino',
+    coordinates: [43.9424, 12.4578],
+    url: '/travel/san-marino',
+    thumbnailUrl: '/img/country-thumbs/san-marino.webp',
+    visited: true,
+    visitedYear: 2023,
+    countryInfo: {
+      population: 0.034,
+      gdp: {
+        amount: '$1.7 billion',
+        worldRank: 174
+      },
+      interestingFact: 'San Marino is the oldest surviving sovereign state and constitutional republic in the world (since 301 AD).',
+      governmentType: 'Unitary parliamentary republic',
+      currency: 'Euro',
+      languages: ['Italian']
+    }
+  },
+  {
+    id: 'RS',
+    name: 'Serbia',
+    coordinates: [44.0165, 21.0059],
+    url: '/travel/serbia',
+    thumbnailUrl: '/img/country-thumbs/serbia.webp',
+    visited: true,
+    visitedYear: 2025,
+    countryInfo: {
+      population: 6.83,
+      gdp: {
+        amount: '$63.1 billion',
+        worldRank: 87
+      },
+      interestingFact: 'Belgrade is one of the oldest continuously inhabited cities in Europe.',
+      governmentType: 'Parliamentary republic',
+      currency: 'Serbian dinar',
+      languages: ['Serbian']
+    }
+  },
+  {
+    id: 'BA',
+    name: 'Bosnia and Herzegovina',
+    coordinates: [43.9159, 17.6791],
+    url: '/travel/bosnia',
+    thumbnailUrl: '/img/country-thumbs/bosnia.webp',
+    visited: true,
+    visitedYear: 2025,
+    countryInfo: {
+      population: 3.28,
+      gdp: {
+        amount: '$23.4 billion',
+        worldRank: 111
+      },
+      interestingFact: 'Sarajevo hosted the 1984 Winter Olympics.',
+      governmentType: 'Federal parliamentary republic',
+      currency: 'Bosnia and Herzegovina convertible mark',
+      languages: ['Bosnian', 'Croatian', 'Serbian']
+    }
+  },
+  {
+    id: 'ME',
+    name: 'Montenegro',
+    coordinates: [42.7087, 19.3744],
+    url: '/travel/montenegro',
+    thumbnailUrl: '/img/country-thumbs/montenegro.webp',
+    visited: true,
+    visitedYear: 2025,
+    countryInfo: {
+      population: 0.62,
+      gdp: {
+        amount: '$6.0 billion',
+        worldRank: 149
+      },
+      interestingFact: 'The name Montenegro means “Black Mountain.”',
+      governmentType: 'Parliamentary republic',
+      currency: 'Euro',
+      languages: ['Montenegrin']
+    }
+  },
+  {
+    id: 'MK',
+    name: 'North Macedonia',
+    coordinates: [41.6086, 21.7453],
+    url: '/travel/north-macedonia',
+    thumbnailUrl: '/img/country-thumbs/north-macedonia.webp',
+    visited: true,
+    visitedYear: 2025,
+    countryInfo: {
+      population: 2.08,
+      gdp: {
+        amount: '$13.9 billion',
+        worldRank: 130
+      },
+      interestingFact: 'Lake Ohrid is one of Europe’s deepest and oldest lakes.',
+      governmentType: 'Parliamentary republic',
+      currency: 'Macedonian denar',
+      languages: ['Macedonian', 'Albanian']
+    }
+  },
+  {
+    id: 'AL',
+    name: 'Albania',
+    coordinates: [41.1533, 20.1683],
+    url: '/travel/albania',
+    thumbnailUrl: '/img/country-thumbs/albania.webp',
+    visited: true,
+    visitedYear: 2025,
+    countryInfo: {
+      population: 2.87,
+      gdp: {
+        amount: '$18.3 billion',
+        worldRank: 123
+      },
+      interestingFact: 'Albania has one of Europe’s highest numbers of bunkers per capita.',
+      governmentType: 'Parliamentary republic',
+      currency: 'Albanian lek',
+      languages: ['Albanian']
+    }
+  },
+  {
+    id: 'TR',
+    name: 'Turkey',
+    coordinates: [38.9637, 35.2433],
+    url: '/travel/turkey',
+    thumbnailUrl: '/img/country-thumbs/turkey.webp',
+    visited: false,
+    visitedYear: 0,
+    countryInfo: {
+      population: 85.0,
+      gdp: {
+        amount: '$819 billion',
+        worldRank: 19
+      },
+      interestingFact: 'Istanbul is the only city in the world spanning two continents.',
+      governmentType: 'Presidential republic',
+      currency: 'Turkish lira',
+      languages: ['Turkish']
+    }
   }
 ]; 

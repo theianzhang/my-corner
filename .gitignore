@@ -47,3 +47,6 @@ firebase-debug.log
 serviceAccountKey.json
 src/firebase/config.ts
 src/firebase/serviceAccount.json
+
+# project-meta
+project-meta/

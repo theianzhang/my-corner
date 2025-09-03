@@ -37,16 +37,16 @@ export default function MagpiePage() {
         {/* Custom visual removed as per previous request */}
       </div>
 
-      {/* YouTube embed */}
+      {/* Laurel image */}
       <div className={styles.youtubeEmbed}>
         <div className={styles.youtubeContainer}>
-          <iframe
-            src="https://www.youtube.com/embed/[YOUR_PRIVATE_VIDEO_ID]"
-            title="Magpie Private Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+          <Image
+            src="/img/movies/mapgie/laurel-yofi.png"
+            alt="Official Selection YoFiFest 2025"
+            fill
+            sizes="(max-width: 768px) 98vw, 700px"
+            style={{ objectFit: 'contain' }}
+            priority
           />
         </div>
       </div>

@@ -1,0 +1,370 @@
+.container {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  z-index: 1;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.summary {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.tripMeta {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.year, .duration, .style {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  font-weight: 600;
+  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Content Sections */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.content section {
+  margin-bottom: 4rem;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 0.5rem;
+}
+
+/* Overview Section */
+.countries {
+  display: grid;
+  gap: 2rem;
+}
+
+.country {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.country h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flag {
+  font-size: 2rem;
+}
+
+.cities {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.city {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #64ffda;
+}
+
+.city h4 {
+  margin-bottom: 1rem;
+  color: #64ffda;
+  font-size: 1.2rem;
+}
+
+.city ul {
+  list-style: none;
+  padding: 0;
+}
+
+.city li {
+  padding: 0.3rem 0;
+  color: #e0e0e0;
+}
+
+.city li::before {
+  content: "→ ";
+  color: #64ffda;
+  font-weight: bold;
+}
+
+/* Stories Section */
+.stories {
+  margin: 4rem 0;
+}
+
+/* Make story section minimal blog style */
+.story {
+  margin-bottom: 4rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.story h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.storyImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 1rem 0;
+}
+
+.storyContent {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.storyContent p {
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+/* Reflections Section */
+.reflections {
+  margin: 4rem 0;
+}
+
+.moments {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.moment {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 4px solid #00bcd4;
+}
+
+.moment h4 {
+  color: #00bcd4;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.moment p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Recommendations Section */
+.recommendations {
+  margin: 4rem 0;
+}
+
+.recGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.recCard {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+}
+
+.recCard h4 {
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.recCard p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.recCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recCard li {
+  padding: 0.5rem 0;
+  color: #e0e0e0;
+}
+
+.recCard li::before {
+  content: "✓ ";
+  color: #64ffda;
+  font-weight: bold;
+}
+
+/* Gallery Section */
+.gallery {
+  margin: 4rem 0;
+}
+
+.galleryGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.galleryItem {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.galleryCaption {
+  padding: 1.5rem;
+}
+
+.galleryCaption p {
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.galleryCaption span {
+  color: #64ffda;
+  font-size: 0.9rem;
+}
+
+/* Tags Section */
+.tags {
+  margin: 4rem 0;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tag {
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  .heroContent {
+    padding: 0 1rem;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .summary {
+    font-size: 1rem;
+  }
+  .tripMeta {
+    gap: 1rem;
+  }
+  .year, .duration, .style {
+    font-size: 0.75rem;
+    padding: 0.25rem 1rem;
+  }
+  .content {
+    padding: 2rem 1rem;
+  }
+  .content h2 {
+    font-size: 1.8rem;
+  }
+  .story h3 {
+    font-size: 1.4rem;
+  }
+  .cities {
+    grid-template-columns: 1fr;
+  }
+  
+  .moments {
+    grid-template-columns: 1fr;
+  }
+  
+  .recGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+} 

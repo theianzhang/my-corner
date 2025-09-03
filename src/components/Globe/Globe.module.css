@@ -1,10 +1,11 @@
 .loadingContainer {
   width: 100%;
-  height: 50vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1A1A1A;
+  background: transparent;
+  border-radius: 50%;
 }
 
 .globeLoader {
@@ -23,12 +24,12 @@
 }
 
 .ring:nth-child(1) {
-  border-top-color: #E9ECEF;
+  border-top-color: rgba(66, 165, 245, 0.8);
   animation-delay: 0s;
 }
 
 .ring:nth-child(2) {
-  border-right-color: #E9ECEF;
+  border-right-color: rgba(171, 71, 188, 0.8);
   animation-delay: 0.4s;
   width: 80%;
   height: 80%;
@@ -37,7 +38,7 @@
 }
 
 .ring:nth-child(3) {
-  border-bottom-color: #E9ECEF;
+  border-bottom-color: rgba(255, 142, 83, 0.8);
   animation-delay: 0.8s;
   width: 60%;
   height: 60%;
@@ -52,4 +53,20 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Globe Container Styling */
+.globeContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Ensure Canvas fills container properly */
+.globeContainer canvas {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50%;
 } 

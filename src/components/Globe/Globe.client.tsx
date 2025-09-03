@@ -58,14 +58,38 @@ export default function Globe3D() {
     fetch(GEOJSON_URL)
       .then(res => res.json())
       .then(data => {
-        const allCountries = data.features.map((feature: GeoJSONFeature) => ({
-          ...feature,
-          isVisited: travelLocations.some(loc => 
-            loc.name === feature.properties.sovereignt ||
-            (feature.properties.sovereignt === "United States of America" && loc.name === "United States") ||
-            (feature.properties.sovereignt === "United Republic of Tanzania" && loc.name === "Tanzania")
-          )
-        }))
+        // Normalize GEOJSON sovereignt names so they can match our travelLocations names
+        const nameAliases: Record<string, string> = {
+          'United States of America': 'United States',
+          'United Republic of Tanzania': 'Tanzania',
+          'Czechia': 'Czech Republic',
+          'Korea, Republic of': 'South Korea',
+          'Russian Federation': 'Russia',
+          'Viet Nam': 'Vietnam',
+          'United Kingdom': 'United Kingdom',
+          'Holy See': 'Vatican City',
+          'Lao PDR': 'Laos',
+          'Bosnia and Herz.': 'Bosnia and Herzegovina',
+          'Côte d’Ivoire': 'Ivory Coast',
+          'Cote d\'Ivoire': 'Ivory Coast',
+          'Bolivia (Plurinational State of)': 'Bolivia',
+          'Venezuela (Bolivarian Republic of)': 'Venezuela',
+          'Iran (Islamic Republic of)': 'Iran',
+          'Syrian Arab Republic': 'Syria',
+          'Kyrgyz Republic': 'Kyrgyzstan',
+          'Dem. Rep. Congo': 'Democratic Republic of the Congo',
+          'Congo': 'Republic of the Congo',
+          'Cabo Verde': 'Cape Verde',
+          'Eswatini': 'Swaziland',
+        }
+
+        const normalize = (name: string): string => nameAliases[name] ?? name
+
+        const allCountries = data.features.map((feature: GeoJSONFeature) => {
+          const sovereign = normalize(feature.properties.sovereignt)
+          const isVisited = travelLocations.some(loc => loc.name === sovereign)
+          return { ...feature, properties: { ...feature.properties, sovereignt: sovereign }, isVisited }
+        })
         setGeoData(allCountries)
       })
   }, [])
@@ -80,7 +104,17 @@ export default function Globe3D() {
   if (!globe) return null
 
   return (
-    <Canvas camera={{ position: [2000, 1200, 0], fov: 70 }}>
+    <Canvas 
+      camera={{ 
+        position: [2000, 1200, 0], 
+        fov: 60 // Slightly tighter field of view for better fit
+      }}
+      style={{ 
+        width: '100%', 
+        height: '100%',
+        borderRadius: '50%' // Ensure canvas is circular
+      }}
+    >
       <ambientLight intensity={1.2} />
       <pointLight position={[10, 10, 10]} intensity={1.2} />
       <primitive object={globe} />
@@ -89,8 +123,14 @@ export default function Globe3D() {
         enablePan={false}
         autoRotate
         autoRotateSpeed={-0.25}
-        minDistance={150}
-        maxDistance={250}
+        minDistance={120} // Slightly closer min distance
+        maxDistance={300} // Allow zooming out more
+        // Prevent scroll conflicts
+        enableDamping={true}
+        dampingFactor={0.05}
+        // Limit vertical rotation to prevent weird angles
+        maxPolarAngle={Math.PI * 0.8}
+        minPolarAngle={Math.PI * 0.2}
       />
     </Canvas>
   )

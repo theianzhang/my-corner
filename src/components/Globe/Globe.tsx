@@ -16,4 +16,10 @@ const Globe3D = dynamic(() => import('./Globe.client'), {
   loading: GlobeLoading
 })
 
-export default Globe3D 
+export default function GlobeWrapper() {
+  return (
+    <div className={styles.globeContainer}>
+      <Globe3D />
+    </div>
+  )
+} 
