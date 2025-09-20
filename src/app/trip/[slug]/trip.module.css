@@ -1,93 +1,61 @@
 .container {
   min-height: 100vh;
-  background: #0a0a0a;
-  color: #ffffff;
+  background: #121212;
+  color: #eee;
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  height: 70vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.heroImage {
-  object-fit: cover;
-  z-index: 1;
-}
-
-.heroOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.heroContent {
-  text-align: center;
+.headerSection {
+  padding: 4rem 1rem 0 1rem;
   max-width: 800px;
-  padding: 0 2rem;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 3.5rem;
-  font-weight: 900;
-  margin-bottom: 1rem;
-  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
 }
 
 .summary {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 2rem;
-  color: #e0e0e0;
+  margin-bottom: 1.25rem;
+  color: #aaa;
 }
 
 .tripMeta {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
 .year, .duration, .style {
-  padding: 0.5rem 1.2rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 25px;
-  font-weight: 600;
-  color: #e0e0e0;
-  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #333;
+  border-radius: 9999px;
+  font-weight: 500;
+  color: #aaa;
+  background: transparent;
 }
 
 /* Content Sections */
 .content {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem 4rem 1rem;
 }
 
 .content section {
   margin-bottom: 4rem;
 }
 
-.content h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 2rem;
-  color: #e0e0e0;
-  border-bottom: 2px solid #333333;
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+  border-bottom: 1px solid #333;
   padding-bottom: 0.5rem;
 }
 
@@ -324,47 +292,10 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero {
-    height: 60vh;
-  }
-  .heroContent {
-    padding: 0 1rem;
-  }
   .title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
   .summary {
     font-size: 1rem;
   }
-  .tripMeta {
-    gap: 1rem;
-  }
-  .year, .duration, .style {
-    font-size: 0.75rem;
-    padding: 0.25rem 1rem;
-  }
-  .content {
-    padding: 2rem 1rem;
-  }
-  .content h2 {
-    font-size: 1.8rem;
-  }
-  .story h3 {
-    font-size: 1.4rem;
-  }
-  .cities {
-    grid-template-columns: 1fr;
-  }
-  
-  .moments {
-    grid-template-columns: 1fr;
-  }
-  
-  .recGrid {
-    grid-template-columns: 1fr;
-  }
-  
-  .galleryGrid {
-    grid-template-columns: 1fr;
-  }
-} 
+}

@@ -19,6 +19,7 @@
   -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
   scrollbar-width: none; /* Hide scrollbar for Firefox */
   -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  scroll-snap-type: x mandatory;
 }
 
 /* Hide scrollbar for Chrome/Safari */
@@ -34,7 +35,6 @@
   display: flex;
   gap: 1.5rem;
   padding: 1rem 0;
-  animation: scroll 120s linear infinite;
   width: max-content;
 }
 
@@ -46,22 +46,7 @@
   animation-play-state: paused;
 }
 
-/* Also pause when touch/scroll happens */
-@media (hover: none) {
-  .scrollWrapper:active .scrollContent {
-    animation-play-state: paused;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    /* Move the entire width of the first set of thumbnails */
-    transform: translateX(calc(-100% / 2));
-  }
-}
+/* Remove infinite scroll animation */
 
 .countryCard {
   flex: 0 0 auto;
@@ -70,6 +55,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  scroll-snap-align: start;
 }
 
 .countryCard:hover {

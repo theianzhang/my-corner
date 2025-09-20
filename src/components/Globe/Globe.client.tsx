@@ -81,6 +81,10 @@ export default function Globe3D() {
           'Congo': 'Republic of the Congo',
           'Cabo Verde': 'Cape Verde',
           'Eswatini': 'Swaziland',
+          // Legacy/alternative names
+          'Macedonia': 'North Macedonia',
+          'FYR Macedonia': 'North Macedonia',
+          'Republic of Serbia': 'Serbia',
         }
 
         const normalize = (name: string): string => nameAliases[name] ?? name
