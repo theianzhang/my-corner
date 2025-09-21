@@ -13,8 +13,8 @@ export const seAsiaTrip = {
   year: 2015,
   duration: 12, // days
   season: "winter",
-  travelStyle: "solo",
-  budget: "backpacker",
+  travelStyle: "lads",
+  budget: "$",
   
   // Countries & Cities
   countries: [

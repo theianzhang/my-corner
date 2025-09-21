@@ -14,7 +14,7 @@ export const scandinaviaTrip = {
   duration: 7, // days
   season: "summer",
   travelStyle: "solo",
-  budget: "mid-range",
+  budget: "$$",
   
   // Countries & Cities
   countries: [

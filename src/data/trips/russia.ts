@@ -13,8 +13,8 @@ export const russiaTrip = {
   year: 2016,
   duration: 10, // days
   season: "summer",
-  travelStyle: "solo",
-  budget: "mid-range",
+  travelStyle: "family",
+  budget: "$$",
   
   // Countries & Cities
   countries: [

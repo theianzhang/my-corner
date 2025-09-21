@@ -1,21 +1,17 @@
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
+import type { Engine } from "tsparticles-engine";
 
 const ParticleBackground = () => {
-  const particlesInit = useCallback(async (engine: any) => {
+  const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container: any) => {
-    // Optional callback
   }, []);
 
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
       options={{
         fullScreen: {
           enable: false,
@@ -36,9 +32,9 @@ const ParticleBackground = () => {
           },
           modes: {
             connect: {
-              distance: 200,
+              distance: 180,
               links: {
-                opacity: 0.1,
+                opacity: 0.15,
               },
             },
           },
@@ -49,30 +45,30 @@ const ParticleBackground = () => {
           },
           links: {
             color: "#64ffda",
-            distance: 200,
+            distance: 180,
             enable: true,
-            opacity: 0.08,
+            opacity: 0.15,
             width: 0.8,
           },
           move: {
-            direction: "bottom",
+            direction: "none",
             enable: true,
             outModes: {
               default: "out",
             },
-            random: true,
-            speed: 0.5,
+            random: false,
+            speed: 0.9,
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 1500,
+              area: 900,
             },
-            value: 40,
+            value: 80,
           },
           opacity: {
-            value: { min: 0.2, max: 0.5 },
+            value: { min: 0.25, max: 0.6 },
             animation: {
               enable: true,
               speed: 0.8,
@@ -83,7 +79,7 @@ const ParticleBackground = () => {
             type: "circle",
           },
           size: {
-            value: { min: 0.8, max: 2 },
+            value: { min: 1, max: 2.5 },
           },
         },
         detectRetina: true,

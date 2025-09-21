@@ -13,7 +13,7 @@ export const seEuropeTrip = {
   year: 2025,
   duration: 12, // days
   season: "spring",
-  travelStyle: "solo",
+  travelStyle: "road trip",
   budget: "budget",
   
   // Countries & Cities

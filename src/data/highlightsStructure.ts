@@ -53,8 +53,49 @@ export interface JourneyCity {
   isEnd?: boolean
 }
 
+// Define Trip types based on our trip data shape
+type TripCountryCity = {
+  name: string
+  days: number
+  highlights: string[]
+}
+
+type TripCountry = {
+  name: string
+  flag?: string
+  cities: TripCountryCity[]
+}
+
+type TripStories = Record<string, { title: string; image?: string; content: string }>
+
+type TripRecommendations = {
+  bestTime?: string
+  budget?: string
+  mustDo?: string[]
+  culturalTips?: string[]
+}
+
+export type TripStory = {
+  heroImage?: string | null
+  heroVideo?: string | null
+  title: string
+  shortTitle?: string
+  slug: string
+  summary: string
+  year: number | string
+  duration: number | string
+  season?: string
+  travelStyle?: string
+  countries: TripCountry[]
+  stories: TripStories
+  personalMoments?: Record<string, string>
+  recommendations?: TripRecommendations
+  gallery?: { src: string; caption?: string; location?: string }[]
+  tags?: string[]
+}
+
 // Helper function to convert TripStory format to EpicJourney format
-function convertTripToJourney(trip: any): EpicJourney {
+function convertTripToJourney(trip: TripStory): EpicJourney {
   return {
     id: trip.slug,
     title: trip.title,
@@ -63,15 +104,15 @@ function convertTripToJourney(trip: any): EpicJourney {
     startDate: `${trip.year}-01-01`, // Simplified for now
     endDate: `${trip.year}-12-31`,
     duration: trip.duration,
-    year: typeof trip.year === 'number' ? trip.year : trip.year,
-    season: trip.season,
+    year: trip.year,
+    season: trip.season as 'spring' | 'summer' | 'fall' | 'winter' | 'year-round' | undefined,
     travelStyle: trip.travelStyle,
-    countries: trip.countries.map((country: any) => ({
+    countries: trip.countries.map((country) => ({
       name: country.name,
       code: country.name.substring(0, 2).toUpperCase(), // Simplified
       coordinates: [0, 0] as [number, number], // Would need proper coordinates
-      daysSpent: country.cities.reduce((total: number, city: any) => total + city.days, 0),
-      cities: country.cities.map((city: any) => ({
+      daysSpent: country.cities.reduce((total: number, city) => total + city.days, 0),
+      cities: country.cities.map((city) => ({
         name: city.name,
         coordinates: [0, 0] as [number, number], // Would need proper coordinates
         activities: city.highlights,
@@ -81,12 +122,12 @@ function convertTripToJourney(trip: any): EpicJourney {
     })),
     story: {
       summary: trip.summary,
-      keyMoments: Object.values(trip.stories).map((story: any) => story.title),
+      keyMoments: Object.values(trip.stories).map((story) => story.title),
       personalReflections: Object.values(trip.personalMoments || {}),
       culturalInsights: trip.recommendations?.culturalTips || []
     },
     highlights: trip.tags,
-    photos: trip.gallery?.map((item: any) => item.src) || [],
+    photos: trip.gallery?.map((item) => item.src) || [],
     tags: trip.tags
   }
 }

@@ -13,7 +13,7 @@ export const pacific101Trip = {
   duration: 7, // days
   season: "summer",
   travelStyle: "road trip",
-  budget: "mid-range",
+  budget: "$",
   
   // States & Cities
   countries: [

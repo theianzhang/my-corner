@@ -13,7 +13,7 @@ export const sevenSummitsTrip = {
   year: "2021+",
   duration: "30+",
   season: "year-round",
-  travelStyle: "solo",
+  travelStyle: "lads",
   budget: "$$$$",
   
   // Countries & Cities
