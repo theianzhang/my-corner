@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import styles from '@/styles/shared/country-page.module.css'
 import QuickLook from '@/components/Country/QuickLook'
+import JournalEntry from '@/components/Country/JournalEntry'
 import { travelLocations } from '@/data/travelLocations'
+import { getGovernmentDefinition } from '@/data/governmentTypes'
 import { notFound } from 'next/navigation'
 
 // Define the types for the RESOLVED params and searchParams
@@ -49,8 +51,8 @@ export default async function CountryPage(props: CountryPageProps) {
   // Format population in millions with 2 decimal places
   // Ensure countryData.countryInfo.population is a number before calling toFixed
   const populationValue = typeof countryData.countryInfo.population === 'number'
-     ? countryData.countryInfo.population
-     : parseFloat(countryData.countryInfo.population as string); // Or handle error/default
+    ? countryData.countryInfo.population
+    : parseFloat(countryData.countryInfo.population as string); // Or handle error/default
 
   const formattedPopulation = !isNaN(populationValue) ? populationValue.toFixed(2) : 'N/A';
 
@@ -66,7 +68,8 @@ export default async function CountryPage(props: CountryPageProps) {
     },
     {
       label: 'Government Type',
-      value: countryData.countryInfo.governmentType
+      value: countryData.countryInfo.governmentType,
+      tooltip: getGovernmentDefinition(countryData.countryInfo.governmentType)
     },
     {
       label: 'Currency',
@@ -77,7 +80,7 @@ export default async function CountryPage(props: CountryPageProps) {
       value: countryData.countryInfo.languages.join(', ')
     },
     {
-      label: 'Fun Fact',
+      label: "Ian's Fun Fact",
       value: countryData.countryInfo.interestingFact
     }
   ];
@@ -101,17 +104,10 @@ export default async function CountryPage(props: CountryPageProps) {
       <div className={styles.content}>
         <QuickLook facts={facts} />
 
-        <article className={styles.journalEntry}>
-          <p>
-            Your travel journal entry will go here. This is a placeholder text that
-            will be replaced with your actual experiences, stories, and memories from
-            your visit to {countryData.name}.
-          </p>
-          <p>
-            You can include multiple paragraphs, photos, and other content to bring
-            your journey to life.
-          </p>
-        </article>
+        <JournalEntry
+          journal={countryData.journal}
+          countryName={countryData.name}
+        />
       </div>
     </div>
   );

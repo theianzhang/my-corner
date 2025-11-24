@@ -49,7 +49,8 @@
   margin-bottom: 1rem;
 }
 
-.body ul, .body ol {
+.body ul,
+.body ol {
   margin-bottom: 1rem;
   padding-left: 1.5rem;
 }
@@ -113,7 +114,7 @@
   .content {
     padding: 0 2rem 0 0;
   }
-  
+
   .post h2 {
     font-size: 1.5rem;
   }
@@ -139,4 +140,4 @@
     margin-bottom: 16px;
     font-size: 13px;
   }
-} 
+}

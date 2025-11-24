@@ -6,7 +6,14 @@ export default function BlogPage() {
     <main className={styles.main}>
       <div className={styles.content}>
         <div className={styles.posts}>
-        <article className={styles.post}>
+          <article className={styles.post}>
+            <Link href="/blog/immigration-iceberg">
+              <h2>The Decade Ahead: Immigration Outlook</h2>
+              <p>The Immigration Iceberg</p>
+              <span className={styles.date}>2025</span>
+            </Link>
+          </article>
+          <article className={styles.post}>
             <Link href="/blog/moving-to-europe">
               <h2>Moving to Europe</h2>
               <p>Is Paris always a good idea?</p>

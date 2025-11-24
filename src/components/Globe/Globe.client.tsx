@@ -108,13 +108,13 @@ export default function Globe3D() {
   if (!globe) return null
 
   return (
-    <Canvas 
-      camera={{ 
-        position: [2000, 1200, 0], 
+    <Canvas
+      camera={{
+        position: [2000, 1200, 0],
         fov: 60 // Slightly tighter field of view for better fit
       }}
-      style={{ 
-        width: '100%', 
+      style={{
+        width: '100%',
         height: '100%',
         borderRadius: '50%' // Ensure canvas is circular
       }}
@@ -122,7 +122,7 @@ export default function Globe3D() {
       <ambientLight intensity={1.2} />
       <pointLight position={[10, 10, 10]} intensity={1.2} />
       <primitive object={globe} />
-      <OrbitControls 
+      <OrbitControls
         enableZoom={true}
         enablePan={false}
         autoRotate

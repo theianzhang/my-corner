@@ -16,10 +16,12 @@
   position: relative;
   width: 100%;
   cursor: grab;
-  -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
-  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* For smoother scrolling on iOS */
+  scrollbar-width: none;
+  /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none;
+  /* Hide scrollbar for IE/Edge */
 }
 
 /* Hide scrollbar for Chrome/Safari */
@@ -38,13 +40,7 @@
   width: max-content;
 }
 
-/* Pause animation when user interacts with the scrolling area */
-.scrollWrapper:hover .scrollContent,
-.scrollWrapper:active .scrollContent,
-.scrollWrapper:focus .scrollContent,
-.scrollWrapper:focus-within .scrollContent {
-  animation-play-state: paused;
-}
+
 
 /* Remove infinite scroll animation */
 
@@ -55,7 +51,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  scroll-snap-align: start;
 }
 
 .countryCard:hover {
@@ -63,10 +58,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 }
 
-/* Hide duplicate items when JavaScript is disabled */
-.duplicate {
-  display: flex;
-}
+
 
 .thumbnail {
   position: relative;
@@ -84,4 +76,4 @@
 
 /* Removed .countryName class since we don't use it anymore */
 
-/* Removed .navigationButtons and .navButton classes since we don't use them anymore */ 
+/* Removed .navigationButtons and .navButton classes since we don't use them anymore */

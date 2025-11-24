@@ -5,6 +5,7 @@ import styles from '@/styles/shared/country-page.module.css'
 interface CountryFact {
   label: string;
   value: string | number;
+  tooltip?: string;
 }
 
 interface QuickLookProps {
@@ -18,7 +19,15 @@ export default function QuickLook({ facts }: QuickLookProps) {
       <div className={styles.factGrid}>
         {facts.map((fact, index) => (
           <div key={index} className={styles.factItem}>
-            <span className={styles.factLabel}>{fact.label}</span>
+            <span className={styles.factLabel}>
+              {fact.label}
+              {fact.tooltip && (
+                <span className={styles.tooltipContainer}>
+                  ?
+                  <span className={styles.tooltipText}>{fact.tooltip}</span>
+                </span>
+              )}
+            </span>
             <span className={styles.factValue}>{fact.value}</span>
           </div>
         ))}

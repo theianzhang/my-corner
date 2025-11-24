@@ -17,6 +17,17 @@ interface TravelLocation {
     currency: string;  // At time of visit
     languages: string[];  // Official languages
   };
+  journal?: {
+    foodHighlight?: string;
+    adventureHighlight?: string;
+    stayHighlight?: string;
+    theMoment?: string;
+    culturalInsight?: string; // "Oh, that's new"
+    localGem?: string;
+    soundtrack?: string;
+    travelTip?: string;
+    languageCorner?: string;
+  };
 }
 
 export const travelLocations: TravelLocation[] = [
@@ -38,6 +49,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Federal Republic",
       currency: "Argentine peso",
       languages: ["Spanish"]
+    },
+    journal: {
+      foodHighlight: "Few outdoor memories can top asado at Aconcagua's base camp. One of the world's top 3 beef cuts (Kobe wagyu and Chuletó Gallego are 1 and 2 for me) at 4,300m above sea level? Flown in fresh on the daily by helicopter and grilled by local mountain guides with a lil' bit of malbec to wash it down? Come on.",
+      adventureHighlight: "The mythical La Caneleta. 100m below the summit. 50/50 on passing out. OSat 60%. I love this sport because it takes you to your absolute limits and beyond.",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -58,6 +80,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Federal parliamentary democracy",
       currency: "Australian dollar",
       languages: ["English"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -78,6 +111,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Federal parliamentary democracy",
       currency: "Euro",
       languages: ["German"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -98,6 +142,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary presidential constitutional republic",
       currency: "Belarusian ruble",
       languages: ["Belarusian", "Russian"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -118,6 +173,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Federal parliamentary democracy",
       currency: "Euro",
       languages: ["Dutch", "French", "German"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -138,6 +204,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Belize dollar",
       languages: ["English"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -158,6 +235,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Cambodian riel",
       languages: ["Khmer"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -178,6 +266,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Federal parliamentary democracy",
       currency: "Canadian dollar",
       languages: ["English", "French"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -198,6 +297,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary presidential constitutional republic",
       currency: "Chilean peso",
       languages: ["Spanish"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -218,6 +328,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary socialist state",
       currency: "Renminbi",
       languages: ["Chinese"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -238,6 +359,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary presidential constitutional republic",
       currency: "Colombian peso",
       languages: ["Spanish"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -258,6 +390,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Czech koruna",
       languages: ["Czech"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -278,6 +421,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Danish krone",
       languages: ["Danish"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -298,6 +452,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary presidential constitutional republic",
       currency: "Egyptian pound",
       languages: ["Arabic"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -318,6 +483,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary semi-presidential democracy",
       currency: "Euro",
       languages: ["French"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -338,6 +514,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Federal parliamentary democracy",
       currency: "Euro",
       languages: ["German"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -358,6 +545,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary presidential constitutional republic",
       currency: "Guatemalan quetzal",
       languages: ["Spanish"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -378,6 +576,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Hungarian forint",
       languages: ["Hungarian"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -398,6 +607,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Icelandic króna",
       languages: ["Icelandic"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -414,10 +634,21 @@ export const travelLocations: TravelLocation[] = [
         amount: "$3.3 trillion",
         worldRank: 7
       },
-      interestingFact: "India is the world's largest democracy.",
+      interestingFact: "The game of Chess originated in India.",
       governmentType: "Federal parliamentary democracy",
       currency: "Indian rupee",
       languages: ["Hindi", "English"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -434,10 +665,21 @@ export const travelLocations: TravelLocation[] = [
         amount: "$354.4 billion",
         worldRank: 42
       },
-      interestingFact: "Ireland is the only English-speaking country in the EU.",
+      interestingFact: "Halloween originated from the ancient Celtic festival of Samhain.",
       governmentType: "Unitary parliamentary democracy",
       currency: "Euro",
       languages: ["Irish", "English"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -454,10 +696,21 @@ export const travelLocations: TravelLocation[] = [
         amount: "$2.1 trillion",
         worldRank: 8
       },
-      interestingFact: "Italy is the world's largest producer of pasta.",
+      interestingFact: "Home to the most UNESCO World Heritage Sites in the world.",
       governmentType: "Unitary parliamentary republic",
       currency: "Euro",
       languages: ["Italian"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -474,10 +727,21 @@ export const travelLocations: TravelLocation[] = [
         amount: "$24.4 billion",
         worldRank: 125
       },
-      interestingFact: "Jamaica is the birthplace of reggae music.",
+      interestingFact: "The fastest runners in the world come from here.",
       governmentType: "Unitary parliamentary democracy",
       currency: "Jamaican dollar",
       languages: ["English"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -494,10 +758,21 @@ export const travelLocations: TravelLocation[] = [
         amount: "$5.4 trillion",
         worldRank: 3
       },
-      interestingFact: "Japan is the world's largest island country.",
+      interestingFact: "There are more pets than children in Japan.",
       governmentType: "Unitary parliamentary democracy",
       currency: "Japanese yen",
       languages: ["Japanese"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -514,10 +789,21 @@ export const travelLocations: TravelLocation[] = [
         amount: "$1.6 trillion",
         worldRank: 11
       },
-      interestingFact: "South Korea is the world's fourth largest economy in terms of purchasing power parity.",
+      interestingFact: "Has the fastest average internet speeds in the world.",
       governmentType: "Unitary presidential constitutional republic",
       currency: "South Korean won",
       languages: ["Korean"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -538,6 +824,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Euro",
       languages: ["Luxembourgish", "French", "German"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -558,6 +855,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Euro",
       languages: ["Maltese", "English"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -578,6 +886,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary federal republic",
       currency: "Mexican peso",
       languages: ["Spanish"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -598,6 +917,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Euro",
       languages: ["Dutch"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -618,6 +948,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Norwegian krone",
       languages: ["Norwegian"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -638,6 +979,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary presidential constitutional republic",
       currency: "Peruvian sol",
       languages: ["Spanish"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -658,6 +1010,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Euro",
       languages: ["Portuguese"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -678,6 +1041,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary presidential constitutional republic",
       currency: "Russian ruble",
       languages: ["Russian"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -698,6 +1072,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Euro",
       languages: ["Spanish"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -718,6 +1103,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Swedish krona",
       languages: ["Swedish"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -738,6 +1134,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Swiss franc",
       languages: ["German", "French", "Italian"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -758,6 +1165,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary presidential constitutional republic",
       currency: "Tanzanian shilling",
       languages: ["Swahili", "English"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -778,6 +1196,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "Thai baht",
       languages: ["Thai"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -798,6 +1227,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary parliamentary democracy",
       currency: "British pound",
       languages: ["English"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -818,6 +1258,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Federal presidential constitutional republic",
       currency: "US dollar",
       languages: ["English"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -838,6 +1289,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary ecclesiastical state",
       currency: "Euro",
       languages: ["Italian"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -858,6 +1320,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: "Unitary socialist republic",
       currency: "Vietnamese dong",
       languages: ["Vietnamese"]
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -878,6 +1351,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: 'Unitary parliamentary republic',
       currency: 'Euro',
       languages: ['Italian']
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -898,6 +1382,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: 'Parliamentary republic',
       currency: 'Serbian dinar',
       languages: ['Serbian']
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -918,6 +1413,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: 'Federal parliamentary republic',
       currency: 'Bosnia and Herzegovina convertible mark',
       languages: ['Bosnian', 'Croatian', 'Serbian']
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -938,6 +1444,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: 'Parliamentary republic',
       currency: 'Euro',
       languages: ['Montenegrin']
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -958,6 +1475,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: 'Parliamentary republic',
       currency: 'Macedonian denar',
       languages: ['Macedonian', 'Albanian']
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
@@ -978,6 +1506,17 @@ export const travelLocations: TravelLocation[] = [
       governmentType: 'Parliamentary republic',
       currency: 'Albanian lek',
       languages: ['Albanian']
+    },
+    journal: {
+      foodHighlight: "",
+      adventureHighlight: "",
+      stayHighlight: "",
+      theMoment: "",
+      culturalInsight: "",
+      localGem: "",
+      soundtrack: "",
+      travelTip: "",
+      languageCorner: ""
     }
   },
   {
