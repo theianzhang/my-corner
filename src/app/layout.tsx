@@ -29,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={geist.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={geist.className} suppressHydrationWarning>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || 'G-3NE0TCYVJY'} />
         <Navbar />
         {children}

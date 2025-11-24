@@ -1,3 +1,5 @@
+'use client'
+
 import dynamic from 'next/dynamic'
 import styles from './Globe.module.css'
 
@@ -16,10 +18,14 @@ const Globe3D = dynamic(() => import('./Globe.client'), {
   loading: GlobeLoading
 })
 
-export default function GlobeWrapper() {
+interface GlobeWrapperProps {
+  onReady?: () => void;
+}
+
+export default function GlobeWrapper({ onReady }: GlobeWrapperProps) {
   return (
     <div className={styles.globeContainer}>
-      <Globe3D />
+      <Globe3D onReady={onReady} />
     </div>
   )
-} 
+}

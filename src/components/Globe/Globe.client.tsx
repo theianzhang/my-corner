@@ -7,7 +7,7 @@ import { OrbitControls } from '@react-three/drei'
 import { travelLocations } from '@/data/travelLocations'
 import * as THREE from 'three'
 
-const GEOJSON_URL = 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_0_countries.geojson'
+const GEOJSON_URL = '/globe.geojson'
 
 interface GeoJSONFeature {
   type: string;
@@ -28,35 +28,29 @@ type GlobeInstance = ThreeGlobe & {
   globeMaterial: () => THREE.Material;
 }
 
-export default function Globe3D() {
+interface Globe3DProps {
+  onReady?: () => void;
+}
+
+export default function Globe3D({ onReady }: Globe3DProps) {
   const [geoData, setGeoData] = useState<GeoJSONData[]>([])
-  const [globe, setGlobe] = useState<GlobeInstance | null>(null)
+  const globeRef = React.useRef<GlobeInstance | null>(null)
+  const [isReady, setIsReady] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  // Initialize globe
+  console.log('[Globe] Component rendering')
+
+  // Fetch country data once on mount
   useEffect(() => {
-    const globeInstance = (new ThreeGlobe() as GlobeInstance)
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-day.jpg')
-      .polygonAltitude(0.01)
-      .polygonCapColor((d: object) => {
-        const data = d as GeoJSONData;
-        // Don't render polygons for Antarctica
-        if (data.properties.sovereignt === 'Antarctica') return 'transparent';
-        return data.isVisited ? 'transparent' : '#666666';
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+
+    fetch(GEOJSON_URL, { signal: controller.signal })
+      .then(res => {
+        clearTimeout(timeoutId)
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
+        return res.json()
       })
-      .polygonSideColor((d: object) => {
-        const data = d as GeoJSONData;
-        if (data.properties.sovereignt === 'Antarctica') return 'transparent';
-        return data.isVisited ? 'transparent' : '#666666';
-      });
-
-    const material = globeInstance.globeMaterial() as THREE.MeshPhongMaterial;
-    material.color = new THREE.Color('#1A1A1A');
-
-    setGlobe(globeInstance)
-
-    // Fetch country data
-    fetch(GEOJSON_URL)
-      .then(res => res.json())
       .then(data => {
         // Normalize GEOJSON sovereignt names so they can match our travelLocations names
         const nameAliases: Record<string, string> = {
@@ -70,8 +64,8 @@ export default function Globe3D() {
           'Holy See': 'Vatican City',
           'Lao PDR': 'Laos',
           'Bosnia and Herz.': 'Bosnia and Herzegovina',
-          'Côte d’Ivoire': 'Ivory Coast',
-          'Cote d\'Ivoire': 'Ivory Coast',
+          "Côte d'Ivoire": 'Ivory Coast',
+          "Cote d'Ivoire": 'Ivory Coast',
           'Bolivia (Plurinational State of)': 'Bolivia',
           'Venezuela (Bolivarian Republic of)': 'Venezuela',
           'Iran (Islamic Republic of)': 'Iran',
@@ -96,19 +90,67 @@ export default function Globe3D() {
         })
         setGeoData(allCountries)
       })
+      .catch(err => {
+        clearTimeout(timeoutId)
+        // Ignore abort errors - these are expected when the component unmounts
+        if (err.name === 'AbortError') return
+        console.error('Failed to load globe data:', err)
+        setError('Failed to load globe data')
+      })
+
+    return () => {
+      clearTimeout(timeoutId)
+      controller.abort()
+    }
   }, [])
 
-  // Update globe when data changes
+  // Initialize globe only after data is ready
   useEffect(() => {
-    if (globe && geoData.length > 0) {
-      globe.polygonsData(geoData)
-    }
-  }, [globe, geoData])
+    if (geoData.length === 0 || globeRef.current) return
 
-  if (!globe) return null
+    if (geoData.length === 0 || globeRef.current) return
+
+    try {
+      const globeInstance = (new ThreeGlobe() as GlobeInstance)
+        .globeImageUrl('/earth-day.jpg')
+        .polygonAltitude(0.01)
+        .polygonCapColor((d: object) => {
+          const data = d as GeoJSONData;
+          // Don't render polygons for Antarctica
+          if (data.properties.sovereignt === 'Antarctica') return 'transparent';
+          return data.isVisited ? 'transparent' : '#666666';
+        })
+        .polygonSideColor((d: object) => {
+          const data = d as GeoJSONData;
+          if (data.properties.sovereignt === 'Antarctica') return 'transparent';
+          return data.isVisited ? 'transparent' : '#666666';
+        })
+        .polygonsData(geoData);
+
+      const material = globeInstance.globeMaterial() as THREE.MeshPhongMaterial;
+      material.color = new THREE.Color('#1A1A1A');
+
+      globeRef.current = globeInstance
+      setIsReady(true)
+    } catch (err) {
+      console.error('[Globe] Error initializing ThreeGlobe:', err)
+      setError('Failed to initialize globe visualization')
+    }
+  }, [geoData])
+
+  if (error) {
+    return (
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: '#ff4444' }}>
+        {error}
+      </div>
+    )
+  }
+
+  if (!isReady || !globeRef.current) return null
 
   return (
     <Canvas
+      onCreated={() => onReady?.()}
       camera={{
         position: [2000, 1200, 0],
         fov: 60 // Slightly tighter field of view for better fit
@@ -121,7 +163,7 @@ export default function Globe3D() {
     >
       <ambientLight intensity={1.2} />
       <pointLight position={[10, 10, 10]} intensity={1.2} />
-      <primitive object={globe} />
+      <primitive object={globeRef.current} />
       <OrbitControls
         enableZoom={true}
         enablePan={false}
