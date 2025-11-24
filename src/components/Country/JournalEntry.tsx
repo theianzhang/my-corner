@@ -1,7 +1,6 @@
 'use client'
 
 import styles from '@/styles/components/journal-sections.module.css'
-import Image from 'next/image'
 
 interface JournalEntryProps {
     journal?: {

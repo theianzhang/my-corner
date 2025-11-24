@@ -24,7 +24,6 @@ const CountryThumbnails = () => {
     if (!scrollContainer) return
 
     let animationFrameId: number
-    let lastScrollLeft = scrollContainer.scrollLeft
 
     const scroll = () => {
       if (!isPaused && scrollContainer) {
