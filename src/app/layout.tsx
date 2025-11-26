@@ -12,9 +12,6 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "Ian's Corner",
   description: "Personal website of Ian Zhang",
-  icons: {
-    icon: '/favicon.jpg',
-  },
 };
 
 export const viewport: Viewport = {
